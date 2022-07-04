@@ -1,0 +1,17 @@
+.color-dark{
+    background-color: #202020;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+}
+
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+.caixa{
+   direction: row; 
+   justify-content: center;
+   align-items: center;
+}
+
+.box-text-d{
+    background-color: antiquewhite;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.box-text-e{
+    background-color: aliceblue;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
