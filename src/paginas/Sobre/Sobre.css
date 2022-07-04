@@ -2,6 +2,7 @@
    direction: row; 
    justify-content: center;
    align-items: center;
+   background-color: aliceblue;
 }
 
 .box-text-d{
@@ -14,4 +15,12 @@
     background-color: aliceblue;
     padding-left: 5vw;
     padding-right: 5vw;
+}
+
+.titulo{
+    color:black !important;
+}
+
+.descricao{
+    font-size: x-large!important;
 }

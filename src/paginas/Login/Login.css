@@ -18,6 +18,10 @@
 
  .button{
     border-color: white !important;
-    background-color: #ff0000 !important;
+    background-color: #1c1c1c !important;
     color: white !important;
- }
+}
+
+.button:hover{
+    background-color: #3a3a3a!important;
+}

@@ -25,7 +25,7 @@ function Login() {
                         </Typography>
                         <TextField
                             id="usuario"
-                            label="usuário"
+                            label="E-mail"
                             variant='outlined'
                             name='usuario'
                             margin='normal'
@@ -33,7 +33,7 @@ function Login() {
                         />
                         <TextField
                             id="senha"
-                            label="senha"
+                            label="Senha"
                             variant='outlined'
                             name='senha'
                             margin='normal'

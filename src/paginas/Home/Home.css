@@ -11,16 +11,37 @@
     margin: 0 auto;
 }
 
-.caixa{
-    background: linear-gradient(36deg, #039c14 8%, #09bd00 75%);
+.caixaH{
+    background: grey;
 }
 
 .botao{
     border-color: white !important;
-    background-color: #ff0000 !important;
+    background-color: #1c1c1c !important;
     color: white !important;
 }
 
+.botao:hover{
+    background-color: #3a3a3a!important;
+}
 .postagens{
     background-color: white;
+}
+
+
+.gridCard{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: aliceblue;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vh;
+}
+
+.cardH{
+    border: 5px solid black;
+    width: 20%;
+    height: 40vh;
+    background-color: rgb(110, 110, 110);
 }

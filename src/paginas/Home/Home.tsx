@@ -13,7 +13,7 @@ function Home() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        className='caixa'
+        className='caixaH'
       >
 
         {/* Primeiro Grid */}
@@ -28,7 +28,7 @@ function Home() {
               component="h3"
               align="center"
               className='titulo'
-            >Casa das mudas
+            >Nome PI
             </Typography>
 
             <Typography
@@ -38,7 +38,7 @@ function Home() {
               component="h5"
               align="center"
               className='titulo'
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eius voluptate illum rerum, blanditiis officia ipsa expedita dicta magnam id repellat, quod facere rem commodi ducimus fugiat voluptatem fuga aliquam.
+            >Explicação do projeto, falando que somos um e-commerce, slogan
             </Typography>
 
           </Box>
@@ -60,6 +60,21 @@ function Home() {
 
         <Grid item xs={6}>
           <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+        </Grid>
+
+        <Grid item xs={12} className="gridCard">
+          <fieldset className="cardH">
+            <Box></Box>
+          </fieldset>
+          <fieldset className="cardH">
+            <Box></Box>
+          </fieldset>
+          <fieldset className="cardH">
+            <Box></Box>
+          </fieldset>
+          <fieldset className="cardH">
+            <Box></Box>
+          </fieldset>
         </Grid>
       </Grid>
 

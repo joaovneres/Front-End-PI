@@ -25,7 +25,7 @@ function Sobre() {
                 <Grid item xs={8}>
                     <Box className="box-text-e">
                         <Typography variant='h5' className='titulo'>
-                            Quem somos?
+                            ODS Escolhida
                         </Typography>
                         <Typography className='descricao'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tenetur fugit, voluptas delectus voluptates eaque corrupti, tempore cum cupiditate pariatur facere alias ducimus quo possimus, quidem sed temporibus ad officiis?
@@ -35,7 +35,7 @@ function Sobre() {
                 <Grid item xs={8}>
                     <Box className="box-text-d">
                         <Typography variant='h5' className='titulo'>
-                            Quem somos?
+                            Nosso proposito?
                         </Typography>
                         <Typography className='descricao'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tenetur fugit, voluptas delectus voluptates eaque corrupti, tempore cum cupiditate pariatur facere alias ducimus quo possimus, quidem sed temporibus ad officiis?
