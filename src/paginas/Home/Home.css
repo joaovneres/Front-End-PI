@@ -34,9 +34,21 @@
     justify-content: space-between;
     flex-direction: row;
     background-color: aliceblue;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    padding-top: 2vh;
+    padding: 3vh
+}
+
+/* Cards Responsivos */
+@media screen and (max-width: 600px){
+    .gridCard{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .cardH{
+        min-width: 60vw;
+        min-height: 40vh;
+        margin-top: 10px;
+    }
 }
 
 .cardH{
