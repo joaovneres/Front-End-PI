@@ -1,10 +1,18 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Grid, Button, TextField } from '@material-ui/core';
-import { Box, Typography } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
-import './CadastroUsuario.css';
+// import React, { ChangeEvent, useEffect, useState } from 'react';
+// import { Grid, Button, TextField } from '@material-ui/core';
+// import { Box, Typography } from '@mui/material';
+// import { Link, useNavigate } from 'react-router-dom';
+// import './CadastroUsuario.css';
+// import Usuario from '../../models/Usuario';
+// import { cadastroUsuario } from '../../services/Service';
+
+import React , {useState, useEffect, ChangeEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Usuario from '../../models/Usuario';
 import { cadastroUsuario } from '../../services/Service';
+import { Grid, Box, Typography, Button, TextField } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import './CadastroUsuario.css';
 
 
 function CadastroUsuario() {
@@ -13,35 +21,35 @@ function CadastroUsuario() {
     const [usuario, setUsuario] = useState<Usuario>(
         {
             idUsuario: 0,
-            nomeUsuario: '',
-            emailUsuario: '',
-            senhaUsuario: '',
-            fotoUsuario: '',
+            nomeUsuario: "",
+            emailUsuario: "",
+            senhaUsuario: "",
+            fotoUsuario: ""
         })
 
     const [usuarioResult, setUserResult] = useState<Usuario>(
         {
             idUsuario: 0,
-            nomeUsuario: '',
-            emailUsuario: '',
-            senhaUsuario: '',
-            fotoUsuario: '',
+            nomeUsuario: "",
+            emailUsuario: "",
+            senhaUsuario: "",
+            fotoUsuario: ""
         })
 
-    // useEffect(() => {
-    //     if (usuarioResult.idUsuario !== 0) {
-    //         navigate("/logar")
-    //     }
+    useEffect(() => {
+        if (usuarioResult.idUsuario !== 0) {
+            navigate("/logar")
+        }
 
-    // }, [usuarioResult])
+    }, [usuarioResult])
 
 
-    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
+    function confirmarSenhaHandle(e:ChangeEvent<HTMLInputElement>) {
         setConfirmarSenha(e.target.value)
     }
 
 
-    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+    function updatedModel(e:ChangeEvent<HTMLInputElement>) {
 
         setUsuario({
             ...usuario,
@@ -49,7 +57,7 @@ function CadastroUsuario() {
         })
 
     }
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+    async function onSubmit(e:ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if(usuario.senhaUsuario === "" || usuario.nomeUsuario === "" || usuario.emailUsuario === ""){
             alert('Possui campos vazios')
@@ -96,27 +104,27 @@ function CadastroUsuario() {
                             color='textPrimary'
                             align='center'
                             component='h3'
-                            // className='textos2'
+                            className='textos2'
                             >
                             Cadastrar
                         </Typography>
                         <TextField
                             value={ usuario.nomeUsuario }
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                             onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id="nome"
                             label="nome"
                             variant='outlined'
-                            name='nome'
+                            name='nomeUsuario'
                             margin='normal'
                             fullWidth
                         />
                         <TextField
                             value={ usuario.emailUsuario }
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e) }
+                            onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e) }
                             id="usuario"
                             label="e-mail"
                             variant='outlined'
-                            name='usuario'
+                            name='emailUsuario'
                             margin='normal'
                             fullWidth
                         />
@@ -126,7 +134,7 @@ function CadastroUsuario() {
                             id="senha"
                             label="senha"
                             variant='outlined'
-                            name='senha'
+                            name='senhaUsuario'
                             margin='normal'
                             fullWidth
                             type='password'

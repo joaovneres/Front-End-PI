@@ -33,11 +33,11 @@ function Login() {
             })
         }
 
-        // useEffect(()=>{
-        //     if(token !== ''){
-        //         navigate('/home')
-        //     }
-        // }, [token])
+        useEffect(()=>{
+            if(token !== ''){
+                navigate('/home')
+            }
+        }, [token])
 
         async function onSubmit(e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
@@ -116,6 +116,7 @@ function Login() {
                                 Não tem uma conta?
                             </Typography>
                         </Box>
+                        <Link to='/cadastro'>
                         <Typography
                             variant="subtitle1"
                             color="initial"
@@ -124,6 +125,7 @@ function Login() {
                             className='textos1'>
                             Cadastre-se
                         </Typography>
+                        </Link>
                     </Box>
                 </Box>
             </Grid>
