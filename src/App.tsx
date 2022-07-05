@@ -5,6 +5,7 @@ import Home from './paginas/Home/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './paginas/Login/Login';
 import Sobre from './paginas/Sobre/Sobre';
+import CadastroUsuario from './paginas/CadastroUsuario/CadastroUsuario';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
            <Route path="/logar" element={<Login />} />
-          {/* <Route path="/cadastro" element={<CadastroUsuario />} />   */}
+          <Route path="/cadastro" element={<CadastroUsuario />} />  
         </Routes>
       </div>
 

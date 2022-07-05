@@ -1,10 +1,60 @@
-import React from 'react'
+import React, { ChangeEvent, useEffect, useState} from 'react'
 import {Grid, Typography, TextField, Button } from '@material-ui/core'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Login.css'
 import { Box } from '@mui/material'
+import useLocalStorage from 'react-use-localstorage';
+import UsuarioLogin from '../../models/UsuarioLogin'
+import { login } from '../../services/Service'
 
 function Login() {
+
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+    const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
+        {
+            // idLogin: number;
+            // usuarioLogin: string;
+            // senhaLogin: string;
+            // tokenLogin?: string| null;
+
+            idLogin: 0,
+            usuarioLogin: '',
+            senhaLogin: '',
+            tokenLogin: ''
+        }
+        
+        )
+
+        function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+            setUsuarioLogin({
+                ...usuarioLogin,
+                [e.target.name]: e.target.value
+            })
+        }
+
+        // useEffect(()=>{
+        //     if(token !== ''){
+        //         navigate('/home')
+        //     }
+        // }, [token])
+
+        async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+            e.preventDefault();
+            try{
+                await login(`/usuario/logar`, usuarioLogin, setToken)
+                alert('Usuário logado com sucesso!');
+
+            }catch(error){
+                alert('Dados inconsistentes')
+            }
+        }
+
+
+
+
+
+
     return (
         <Grid
             container
@@ -13,7 +63,7 @@ function Login() {
             alignItems='center'>
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
-                    <form>
+                    <form onSubmit={onSubmit}>
                         <Typography
                             variant='h3'
                             gutterBottom
@@ -24,31 +74,33 @@ function Login() {
                             Entrar
                         </Typography>
                         <TextField
+                            value={usuarioLogin.usuarioLogin}
+                             onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id="usuario"
                             label="E-mail"
                             variant='outlined'
-                            name='usuario'
+                            name='usuarioLogin'
                             margin='normal'
                             fullWidth
                         />
                         <TextField
+                            value={usuarioLogin.senhaLogin}
+                             onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id="senha"
                             label="Senha"
                             variant='outlined'
-                            name='senha'
+                            name='senhaLogin'
                             margin='normal'
                             type='password'
                             fullWidth
                         />
-                        <Box marginTop={2} textAlign='center'>
-                            <Link to='/home' className='text-decoration-none'>
+                        <Box marginTop={2} textAlign='center'>                            
                                 <Button
                                     type='submit'
                                     variant='contained'
                                     className='button'>
                                     Logar
                                 </Button>
-                            </Link>
                         </Box>
                     </form>
                     <Box
