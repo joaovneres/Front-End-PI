@@ -11,9 +11,7 @@ function Navbar() {
                 <Toolbar variant="dense" className='color-dark card-nav'>
                     <Link to='/home' className='text-decorator-none card-nav'>
                         <Box className='cursor card-nav'>
-                            <Typography variant="h5">
-                                Botanic House
-                            </Typography>
+                            <img alt='Logo Botanic House' src="https://i.imgur.com/rgsqm4w.png" className='logo-navbar'/>
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start" className='card-nav'>
