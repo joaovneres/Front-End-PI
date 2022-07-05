@@ -1,17 +1,18 @@
-.box1{
-    background: grey;
-    height: 120px;
-}
-.box2{
-    background: rgb(90, 90, 90);
-    height: 60px;
-}
-
-.redes{
-    font-size: 60px !important;
-    color: #ffffff;
+.footer{
+    background-color: #289781;
+    height: 7vh;
 }
 
 .textos{
+    text-align: center;
     color: #ffffff
+}
+
+.links{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.links:hover{
+    color: #e633ff;
 }

@@ -12,8 +12,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-
-      <div style={{ minHeight: '100vh' }}>
          <Routes> {/* Antigo Switch */}
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
@@ -21,8 +19,6 @@ function App() {
            <Route path="/logar" element={<Login />} />
           <Route path="/cadastro" element={<CadastroUsuario />} />  
         </Routes>
-      </div>
-
       <Footer />
     </Router>
   )

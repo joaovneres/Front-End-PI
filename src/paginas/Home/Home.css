@@ -3,16 +3,19 @@
     font-weight: bold !important;
 }
 
-.imagens{
-    width: 800px;
-    height: 500px;
-    /* Centralizando imagem */
-    display: block;
-    margin: 0 auto;
+
+.tamanhoHome{
+    padding-top: 10vh;
+}
+
+.LogoHome{
+    padding-right: 5vw;
+    display: flex;
+    justify-content: center;
 }
 
 .caixaH{
-    background: grey;
+    background-color: #34b99f;
 }
 
 .botao{
@@ -30,11 +33,18 @@
 
 
 .gridCard{
+    padding-top: 25vh;
+    padding-bottom: 5vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
-    background-color: aliceblue;
-    padding: 3vh
+}
+
+.cardH{
+    border: 5px solid black;
+    width: 18vw;
+    height: 40vh;
+    background-color: rgb(110, 110, 110);
 }
 
 /* Cards Responsivos */
@@ -49,11 +59,4 @@
         min-height: 40vh;
         margin-top: 10px;
     }
-}
-
-.cardH{
-    border: 5px solid black;
-    width: 20%;
-    height: 40vh;
-    background-color: rgb(110, 110, 110);
 }

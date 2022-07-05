@@ -1,6 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Typography, Grid } from '@material-ui/core';
 import './Home.css';
 import { Box } from '@mui/material';
 
@@ -18,7 +17,7 @@ function Home() {
 
         {/* Primeiro Grid */}
 
-        <Grid alignItems="center" item xs={6} >
+        <Grid alignItems="center" item xs={6} className="tamanhoHome">
           <Box paddingX={20} >
 
             <Typography
@@ -40,32 +39,20 @@ function Home() {
               className='titulo'
             >Explicação do projeto, falando que somos um e-commerce, slogan
             </Typography>
-
           </Box>
-
           <Box display="flex" justifyContent="center">
             <Box marginRight={1}>
             </Box>
-            <Link to="/sobre" className='text-decorator-none'>
-              <Button
-                variant="outlined"
-                className='botao'
-              >Saber mais
-              </Button>
-            </Link>
           </Box>
         </Grid>
 
         { /* Segundo Grid */}
 
-        <Grid item xs={6}>
-          <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+        <Grid item xs={6} className="tamanhoHome">
+          <img src="https://i.imgur.com/fMfpUeY.png" alt="" width="85%" className='LogoHome' />
         </Grid>
 
-        <Grid item xs={12} className="gridCard">
-          <fieldset className="cardH">
-            <Box></Box>
-          </fieldset>
+        <Grid item xs={10} className="gridCard">
           <fieldset className="cardH">
             <Box></Box>
           </fieldset>

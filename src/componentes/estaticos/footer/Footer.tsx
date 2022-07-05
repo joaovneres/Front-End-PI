@@ -15,70 +15,28 @@ function Footer() {
                 justifyContent="center"
                 alignItems="center"
             >
-                <Grid alignItems="center" item xs={12}>
-                    <Box className='box1'>
-                        <Box
-                            paddingTop={1}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center">
-                            <Typography
-                                variant="h5"
-                                align="center"
-                                gutterBottom
-                                style={{ color: "white" }}>
-                                Siga-nos nas redes sociais
-                            </Typography>
-                        </Box>
-
-                        <Box
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center">
-
-                            <a
-                                href="https://www.facebook.com/generationbrasil" >
-                                <FacebookIcon className='redes' />
-                            </a>
-
-                            <a
-                                href="https://www.instagram.com/generationbrasil/" >
-                                <InstagramIcon className='redes' />
-                            </a>
-
-                            <a
-                                href="https://www.linkedin.com/school/generationbrasil/" >
-                                <LinkedInIcon className='redes' />
-                            </a>
-                        </Box>
-
-                    </Box>
-
-                    <Box className='box2'>
+                <Grid item xs={12}>
+                    <Box className='footer'>
 
                         <Box paddingTop={1}>
                             <Typography
                                 variant="subtitle2"
-                                align="center"
-                                gutterBottom
                                 className='textos'>
-                                © 2020 Copyright:
+                                © 2022 Copyright:
                             </Typography>
                         </Box>
-
                         <Box>
-                            <a href="https://brasil.generation.org">
-                                <Typography
-                                    variant="subtitle2"
-                                    gutterBottom
-                                    className='textos'
-                                    align="center">
-                                    brasil.generation.org
-                                </Typography>
-                            </a>
+                            <Typography
+                                variant="subtitle2"
+                                gutterBottom
+                                className='textos'>
+                                <a href='https://github.com/joaovneres/Front-End-PI' className='links'>
+                                    Botanic House
+                                </a>
+                            </Typography>
                         </Box>
-
                     </Box>
+
                 </Grid>
             </Grid>
         </>

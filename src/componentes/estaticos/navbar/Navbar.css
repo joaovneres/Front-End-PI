@@ -1,14 +1,27 @@
-.logo-navbar{
-    max-width: 50%;
+.header{
+    box-shadow: none!important;
 }
 
-.color-dark{
-    background-color: #202020;
+.logo-navbar{
+    height: 5vh;
+    margin-top: 1vh;
+}
+
+.card-nav{
+    background-color: #34b99f;
     justify-content: space-between;
 }
 
-.text-decoration-none{
+.links{
     text-decoration: none;
+}
+
+.navegar{
+    font-family: 'Heebo', sans-serif;
+}
+
+.navegar:hover{
+    color: #e633ff;
 }
 
 .cursor{
