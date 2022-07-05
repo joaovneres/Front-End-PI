@@ -8,39 +8,39 @@ function Navbar() {
     return (
         <>
             <AppBar position="sticky">
-                <Toolbar variant="dense" className='color-dark'>
-                    <Link to='/home' className='text-decorator-none'>
-                        <Box className='cursor'>
+                <Toolbar variant="dense" className='color-dark card-nav'>
+                    <Link to='/home' className='text-decorator-none card-nav'>
+                        <Box className='cursor card-nav'>
                             <Typography variant="h5">
-                                Nome PI
+                                Botanic House
                             </Typography>
                         </Box>
                     </Link>
-                    <Box display="flex" justifyContent="start">
+                    <Box display="flex" justifyContent="start" className='card-nav'>
                         <Link to='/home' className='text-decorator-none'>
-                            <Box mx={1} className='cursor'>
+                            <Box mx={1} className='cursor card-nav'>
                                 <Typography variant="h6" color="inherit">
                                     Home
                                 </Typography>
                             </Box>
                         </Link>
-                        <Box mx={1} className='cursor'>
+                        <Box mx={1} className='cursor card-nav'>
                             <Typography variant="h6" color="inherit">
                                 Produtos
                             </Typography>
                         </Box>
-                        <Box mx={1} className='cursor'>
+                        <Box mx={1} className='cursor card-nav'>
                             <Typography variant="h6" color="inherit">
                                 Categorias
                             </Typography>
                         </Box>
-                        <Box mx={1} className='cursor'>
+                        <Box mx={1} className='cursor card-nav'>
                             <Typography variant="h6" color="inherit">
                                 Anunciar muda
                             </Typography>
                         </Box>
                         <Link to='/logar' className='text-decorator-none'>
-                            <Box mx={1} className='cursor'>
+                            <Box mx={1} className='cursor card-nav'>
                                 <Typography variant="h6" color="inherit">
                                     Login
                                 </Typography>
