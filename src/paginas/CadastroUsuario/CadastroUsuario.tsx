@@ -40,7 +40,7 @@ function CadastroUsuario() {
         if (usuarioResult.idUsuario !== 0) {
             navigate("/logar")
         }
-
+    // eslint-disable-next-line
     }, [usuarioResult])
 
 
@@ -151,7 +151,7 @@ function CadastroUsuario() {
                             fullWidth
                         />
                         <Box marginTop={2} textAlign='center'>
-                            <Link to='/login' className='text-decorator-none'>
+                            <Link to='/logar' className='text-decorator-none'>
                                 <Button
                                     className='btnCancelar'
                                     variant='contained'
