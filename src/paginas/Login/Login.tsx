@@ -39,6 +39,7 @@ function Login() {
             try{
                 await login(`/usuario/logar`, usuarioLogin, setToken)
                 alert('Usuário logado com sucesso!');
+                console.log(usuarioLogin);
 
             }catch(error){
                 alert('Dados inconsistentes')
