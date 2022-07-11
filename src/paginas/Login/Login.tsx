@@ -1,16 +1,18 @@
-import React, { ChangeEvent, useEffect, useState} from 'react'
-import {Grid, Typography, TextField, Button } from '@material-ui/core'
+import React, { ChangeEvent, useEffect, useState } from 'react'
+import { Grid, Typography, TextField, Button } from '@material-ui/core'
 import { Link, useNavigate } from 'react-router-dom'
 import './Login.css'
 import { Box } from '@mui/material'
-import useLocalStorage from 'react-use-localstorage';
 import UsuarioLogin from '../../models/UsuarioLogin'
 import { login } from '../../services/Service'
+import { useDispatch } from 'react-redux'
+import { addId, addToken } from '../../store/tokens/action'
 
 function Login() {
 
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    let dispatch = useDispatch();
+    const [token, setToken] = useState('');
     const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
         {
             idLogin: 0,
@@ -18,38 +20,48 @@ function Login() {
             senhaLogin: '',
             tokenLogin: ''
         }
-        
-        )
 
-        function updatedModel(e: ChangeEvent<HTMLInputElement>) {
-            setUsuarioLogin({
-                ...usuarioLogin,
-                [e.target.name]: e.target.value
-            })
+    )
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUsuarioLogin({
+            ...usuarioLogin,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    useEffect(() => {
+        if (token !== '') {
+            dispatch(addToken(token))
+            navigate('/home')
         }
+    }, [token])
 
-        useEffect(()=>{
-            if(token !== ''){
-                navigate('/home')
-            }
-        }, [token])
+    useEffect(() => {
+        if (usuarioLogin.tokenLogin !== "") {
 
-        async function onSubmit(e: ChangeEvent<HTMLFormElement>){
-            e.preventDefault();
-            try{
-                await login(`/usuario/logar`, usuarioLogin, setToken)
-                alert('Usuário logado com sucesso!');
-                console.log(usuarioLogin);
+            // Verifica os dados pelo console (Opcional)
+            console.log("Token: " + usuarioLogin.tokenLogin)
+            console.log("ID: " + usuarioLogin.idLogin)
 
-            }catch(error){
-                alert('Dados inconsistentes')
-            }
+            // Guarda as informações dentro do Redux (Store)
+            dispatch(addToken(usuarioLogin.tokenLogin))
+            dispatch(addId(usuarioLogin.idLogin.toString()))    // Faz uma conversão de Number para String
+            navigate('/home')
         }
+    }, [usuarioLogin.tokenLogin])
 
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+        try {
+            await login(`/usuario/logar`, usuarioLogin, setToken)
+            alert('Usuário logado com sucesso!');
+            console.log(usuarioLogin);
 
-
-
-
+        } catch (error) {
+            alert('Dados inconsistentes')
+        }
+    }
 
     return (
         <Grid
@@ -71,7 +83,7 @@ function Login() {
                         </Typography>
                         <TextField
                             value={usuarioLogin.usuarioLogin}
-                             onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id="usuario"
                             label="E-mail"
                             variant='outlined'
@@ -81,7 +93,7 @@ function Login() {
                         />
                         <TextField
                             value={usuarioLogin.senhaLogin}
-                             onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id="senha"
                             label="Senha"
                             variant='outlined'
@@ -90,13 +102,13 @@ function Login() {
                             type='password'
                             fullWidth
                         />
-                        <Box marginTop={2} textAlign='center'>                            
-                                <Button
-                                    type='submit'
-                                    variant='contained'
-                                    className='button'>
-                                    Logar
-                                </Button>
+                        <Box marginTop={2} textAlign='center'>
+                            <Button
+                                type='submit'
+                                variant='contained'
+                                className='button'>
+                                Logar
+                            </Button>
                         </Box>
                     </form>
                     <Box
@@ -113,14 +125,14 @@ function Login() {
                             </Typography>
                         </Box>
                         <Link to='/cadastro'>
-                        <Typography
-                            variant="subtitle1"
-                            color="initial"
-                            gutterBottom
-                            align='center'
-                            className='textos1'>
-                            Cadastre-se
-                        </Typography>
+                            <Typography
+                                variant="subtitle1"
+                                color="initial"
+                                gutterBottom
+                                align='center'
+                                className='textos1'>
+                                Cadastre-se
+                            </Typography>
                         </Link>
                     </Box>
                 </Box>
