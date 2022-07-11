@@ -5,6 +5,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import Categoria from '../../../models/Categoria';
 import { buscaId, post, put } from '../../../services/Service';
 import { Button, Container, TextField, Typography } from '@material-ui/core';
+import './CadastroCategoria.css';
 
 function CadastroCategoria() {
   //Navegar entre as telas
