@@ -1,4 +1,5 @@
 import axios from "axios";
+import { url } from "inspector";
 
 export const api = axios.create({
     // baseURL: 'https://bloggeneration.herokuapp.com'
@@ -21,6 +22,10 @@ export const buscaId = async (url: any, setDado: any, headers: any) => {
     setDado(resposta.data)
 }
 
+export const buscar = async(url: any, setDado: any, headers: any) => {
+    const resposta = await api.get(url, headers)
+    setDado(resposta.data)
+}
 export const put = async (url: any, dados: any, setDados: any, headers: any) => {
     const resposta = await api.put(url, dados, headers)
     setDados(resposta.data)

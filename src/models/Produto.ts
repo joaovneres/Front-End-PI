@@ -1,4 +1,4 @@
-import Tema from "./Tema";
+import Tema from "./Categoria";
 import Usuario from "./Usuario";
 
 interface Produto{

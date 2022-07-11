@@ -4,6 +4,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Produto from '../../../models/Produto';
 import Usuario from '../../../models/Usuario';
+import Categoria from '../../../models/Categoria';
+import { buscar } from '../../../services/Service';
 
 function CadastroProduto() {
   let navigate = useNavigate();
@@ -24,7 +26,7 @@ function CadastroProduto() {
     idCategoria: 0,
     tipoCategoria: '',
     tamanhoCategoria: '',
-    alimenticiaCategoria: null
+    alimenticiaCategoria: false
 
   });
 
@@ -55,12 +57,13 @@ function CadastroProduto() {
   }, [token]);
 
   async function buscarCategoria(){
-    await buscar('/categorias', setCategorias{
+    await buscar('/categorias', setCategorias, {
       headers:{
         Authorization : token,
       },
     });
   }
+
 
   return (
     <div>CadastroProduto</div>
