@@ -82,7 +82,8 @@ function Login() {
         xs={4}
         className='formulario'>
         <Box
-          paddingX={10}>
+          paddingX={10}
+          paddingY={7}>
           <form
             onSubmit={logar}>
             <Typography
@@ -99,10 +100,12 @@ function Login() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="usuario"
               label="usuário"
+              color='primary'
               variant="outlined"
               name="usuarioLogin"
               margin="normal"
               fullWidth
+              className='teste'
             />
             <TextField
               value={usuarioLogin.senhaLogin}

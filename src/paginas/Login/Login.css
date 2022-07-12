@@ -28,10 +28,12 @@
 
 .formulario{
     background-color: #ffffffc5;
+    border-radius: 50px;
 }
 
 .botaoLogar{
-    color: rgb(0, 0, 0);
+    font-size: 17px !important;
+    color: #ffffff !important;
     background-color: #34b99f !important;
 }
 .botaoLogar:hover{
@@ -40,4 +42,15 @@
 
 .branco{
     color: rgb(0, 0, 0) !important;
+}
+
+
+/* Mudando cores padrão do MUI Material */
+
+.MuiOutlinedInput-notchedOutline{
+    border: 1.5px solid #3a3a3a !important;
+}
+
+label {
+    color: #3a3a3a !important;
 }
