@@ -41,14 +41,14 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/formularioProduto'>
+                        <Link to='/formularioProduto' className='links'>
                             <Box mx={1} className='cursor card-nav'>
                                 <Typography variant="h6" className='navegar'>
                                     Produto
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/formularioCategoria'>
+                        <Link to='/formularioCategoria' className='links'>
                             <Box mx={1} className='cursor card-nav'>
                                 <Typography variant="h6" className='navegar'>
                                     Categorias
