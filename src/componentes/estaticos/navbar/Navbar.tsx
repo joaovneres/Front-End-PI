@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Box } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -22,6 +22,8 @@ function Navbar() {
     const dispatch = useDispatch()
 
     let navigate = useNavigate();
+
+    let rota = useLocation();
 
     var navbarComponent
     if (token === "") {
@@ -120,6 +122,11 @@ function Navbar() {
                 </Toolbar>
             </AppBar>
     }
+
+    if (rota.pathname === '/logar' || rota.pathname === '/cadastro') {
+        navbarComponent = (<></>)
+      }
+
     return (
         <>
             {navbarComponent}
