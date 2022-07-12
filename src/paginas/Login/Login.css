@@ -2,14 +2,14 @@
 .textos1{
     font-weight: bold !important;
  }
- 
- .imagem{
-     background-image: url(https://img.freepik.com/free-vector/mountain-river-camping-nature-adventure-night-wild-line-badge-patch-pin-graphic-illustration-vector-art-tshirt-design_370269-276.jpg?w=2000);
-     background-repeat: no-repeat;
-     width: 100vh;
-     min-height: 100vh;
-     background-size: cover;
-     background-position: center;
+
+ .body{
+    background-image: url(https://i.imgur.com/C8LxUN6.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
  }
  
  .text-decorator-none{
@@ -18,10 +18,26 @@
 
  .button{
     border-color: white !important;
-    background-color: #1c1c1c !important;
+    background-color: #ffffff !important;
     color: white !important;
 }
 
 .button:hover{
     background-color: #3a3a3a!important;
+}
+
+.formulario{
+    background-color: #ffffffc5;
+}
+
+.botaoLogar{
+    color: rgb(0, 0, 0);
+    background-color: #34b99f !important;
+}
+.botaoLogar:hover{
+    background-color: #e633ff !important;
+}
+
+.branco{
+    color: rgb(0, 0, 0) !important;
 }
