@@ -85,7 +85,7 @@ function CadastroCategoria() {
   }
 
   function back() {
-    navigate('/categorias');
+    navigate('/categoria');
   }
 
   return (
@@ -104,17 +104,7 @@ function CadastroCategoria() {
             id="descricao"
             label="Descrição"
             variant="outlined"
-            name="descricao"
-            margin="normal"
-            fullWidth
-            value={categoria.tamanhoCategoria}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
-          />
-          <TextField
-            id="descricao"
-            label="Descrição"
-            variant="outlined"
-            name="descricao"
+            name="tipoCategoria"
             margin="normal"
             fullWidth
             value={categoria.tipoCategoria}
@@ -124,7 +114,17 @@ function CadastroCategoria() {
             id="descricao"
             label="Descrição"
             variant="outlined"
-            name="descricao"
+            name="tamanhoCategoria"
+            margin="normal"
+            fullWidth
+            value={categoria.tamanhoCategoria}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
+          />
+          <TextField
+            id="descricao"
+            label="Descrição"
+            variant="outlined"
+            name="alimenticiaCategoria"
             margin="normal"
             fullWidth
             value={categoria.alimenticiaCategoria}

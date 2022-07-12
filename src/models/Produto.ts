@@ -4,6 +4,7 @@ import Usuario from "./Usuario";
 interface Produto{
     idProduto: number;
     nomeProduto: string;
+    qtdProduto: number;
     valorProduto: number;
     descProduto: string;
     imgProduto: string;

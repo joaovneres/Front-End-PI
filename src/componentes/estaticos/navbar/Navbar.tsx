@@ -23,16 +23,20 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Box mx={1} className='cursor card-nav'>
-                            <Typography variant="h6" className='navegar'>
-                                Catálogo
-                            </Typography>
-                        </Box>
-                        <Box mx={1} className='cursor card-nav'>
-                            <Typography variant="h6" className='navegar'>
-                                Categorias
-                            </Typography>
-                        </Box>
+                        <Link to='/formularioProduto'>
+                            <Box mx={1} className='cursor card-nav'>
+                                <Typography variant="h6" className='navegar'>
+                                    Produto
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Link to='/formularioCategoria'>
+                            <Box mx={1} className='cursor card-nav'>
+                                <Typography variant="h6" className='navegar'>
+                                    Categorias
+                                </Typography>
+                            </Box>
+                        </Link>
                         <Link to='/sobre' className='links'>
                             <Box mx={1} className='cursor card-nav'>
                                 <Typography variant="h6" className='navegar'>

@@ -63,7 +63,7 @@ function ListaCategoria() {
                                 justifyContent="center"
                                 mb={1.5}>
                                 <Link
-                                    to={`/formularioTema/${categoria.idCategoria}`} className="text-decorator-none">
+                                    to={`/formularioCategoria/${categoria.idCategoria}`} className="text-decorator-none">
                                     <Box mx={1}>
                                         <Button
                                             variant="contained"
@@ -75,7 +75,7 @@ function ListaCategoria() {
                                     </Box>
                                 </Link>
                                 <Link
-                                    to={`/deletarTema/${categoria.idCategoria}`}
+                                    to={`/deletarCategoria/${categoria.idCategoria}`}
                                     className="text-decorator-none">
                                     <Box mx={1}>
                                         <Button

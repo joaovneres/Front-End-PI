@@ -7,7 +7,7 @@ import Categoria from '../../../models/Categoria';
 import { buscaId, deleteId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
-function deletarCategoria() {
+function DeletarCategoria() {
     let navigate = useNavigate();
     const { idCategoria } = useParams<{ idCategoria: string }>()
 
@@ -28,7 +28,7 @@ function deletarCategoria() {
     async function findById(idCategoria: string) {
         await buscaId(`/categoria/${idCategoria}`, setCategoria, {
             headers: {
-                'Authorization': token
+                Authorization: token
             }
         })
     }
@@ -42,7 +42,7 @@ function deletarCategoria() {
     async function sim() {
         await deleteId(`/categoria/${idCategoria}`, {
             headers: {
-                'Authorization': token
+                Authorization: token,
             }
         })
         alert('Tema apagado com sucesso (teoricamente)');
@@ -64,7 +64,6 @@ function deletarCategoria() {
                                 gutterBottom>
                                 Deseja deletar a Categoria? :
                             </Typography>
-
                             <Typography
                                 color='textSecondary'>
                                 {categoria?.tipoCategoria}
@@ -105,4 +104,4 @@ function deletarCategoria() {
     )
 }
 
-export default deletarCategoria
+export default DeletarCategoria;

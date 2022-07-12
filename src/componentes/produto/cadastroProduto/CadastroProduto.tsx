@@ -35,6 +35,7 @@ function CadastroProduto() {
     idProduto: 0,
     nomeProduto: '',
     valorProduto: 0,
+    qtdProduto: 0,
     descProduto: '',
     imgProduto: '',
     enderecoProduto: '',
@@ -58,7 +59,7 @@ function CadastroProduto() {
   }, [token]);
 
   async function buscarCategoria() {
-    await buscar('/categorias', setCategorias, {
+    await buscar('/categoria', setCategorias, {
       headers: {
         Authorization: token,
       },
@@ -81,7 +82,7 @@ function CadastroProduto() {
   }, [categoria]);
 
   async function findByIdProduto(idProduto: string) {
-    await buscaId(`/postagens/${idProduto}`, setProduto, {
+    await buscaId(`/produto/${idProduto}`, setProduto, {
       headers: {
         Authorization: token,
       },
@@ -98,7 +99,7 @@ function CadastroProduto() {
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
-
+    console.log(produto);
     if (idProduto !== undefined) {
       try {
         await put('/produto', produto, setProduto, {
@@ -121,14 +122,14 @@ function CadastroProduto() {
         alert('Produto cadastrado')
       } catch (error) {
         console.log(`Erro: ${error}`);
-        alert('Falha ao criar a postagem');
+        alert('Falha ao criar a produto');
       }
     }
     back();
   }
 
   function back() {
-    navigate('/produtos');
+    navigate('/produto');
   }
 
   return (
@@ -162,8 +163,18 @@ function CadastroProduto() {
             margin="normal"
             fullWidth
             multiline
-            rows={3}
             value={produto.valorProduto}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updateProduto(e)}
+          />
+          <TextField
+            id="qtdProduto"
+            label="Quantidade do produto"
+            variant="outlined"
+            name="qtdProduto"
+            margin="normal"
+            fullWidth
+            multiline
+            value={produto.qtdProduto}
             onChange={(e: ChangeEvent<HTMLInputElement>) => updateProduto(e)}
           />
           <TextField
@@ -174,7 +185,6 @@ function CadastroProduto() {
             margin="normal"
             fullWidth
             multiline
-            rows={3}
             value={produto.descProduto}
             onChange={(e: ChangeEvent<HTMLInputElement>) => updateProduto(e)}
           />
@@ -187,7 +197,6 @@ function CadastroProduto() {
             margin="normal"
             fullWidth
             multiline
-            rows={3}
             value={produto.imgProduto}
             onChange={(e: ChangeEvent<HTMLInputElement>) => updateProduto(e)}
           />
@@ -200,7 +209,6 @@ function CadastroProduto() {
             margin="normal"
             fullWidth
             multiline
-            rows={3}
             value={produto.enderecoProduto}
             onChange={(e: ChangeEvent<HTMLInputElement>) => updateProduto(e)}
           />
@@ -222,7 +230,7 @@ function CadastroProduto() {
                 <MenuItem value={categoria.idCategoria}>{categoria.tipoCategoria}</MenuItem>
               ))}
             </Select>
-            <FormHelperText>Escolha um tema para a postagem</FormHelperText>
+            <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
 
             <Button type="submit" variant="contained" color="primary">
               Finalizar

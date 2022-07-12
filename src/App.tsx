@@ -7,24 +7,40 @@ import Login from './paginas/Login/Login';
 import Sobre from './paginas/Sobre/Sobre';
 import CadastroUsuario from './paginas/CadastroUsuario/CadastroUsuario';
 import CadastroCategoria from './componentes/categoria/cadastroCategoria/CadastroCategoria';
+import ListaCategoria from './componentes/categoria/listaCategoria/ListaCategoria';
+import ListarProduto from './componentes/produto/listarProduto/ListarProduto';
+import CadastroProduto from './componentes/produto/cadastroProduto/CadastroProduto';
+import DeletarProduto from './componentes/produto/deletarProduto/DeletarProduto';
+import DeletarCategoria from './componentes/categoria/deletarCategoria/DeletarCategoria';
+import store from './store/store';
+import { Provider } from 'react-redux';
 
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-         <Routes> {/* Antigo Switch */}
+    <Provider store={store}>
+      <Router>
+        <Navbar />
+        <Routes> {/* Antigo Switch */}
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
-           <Route path="/logar" element={<Login />} />
-          <Route path="/cadastro" element={<CadastroUsuario />} />  
-          <Route path="/cadastroCategoria" element={<CadastroCategoria />} />
+          <Route path="/logar" element={<Login />} />
+          <Route path="/cadastro" element={<CadastroUsuario />} />
+          <Route path="/categoria" element={<ListaCategoria />} />
+          <Route path="/produto" element={<ListarProduto />} />
+          <Route path="/formularioCategoria" element={<CadastroCategoria />} />
+          <Route path="/formularioProduto" element={<CadastroProduto />} />
+          <Route path="/formularioCategoria/:idCategoria" element={<CadastroCategoria />} />
+          <Route path="/formularioProduto/:idProduto" element={<CadastroProduto />} />
+          <Route path="/deletarCategoria/:idCategoria" element={<DeletarCategoria />} />
+          <Route path="/deletarProduto/:idProduto" element={<DeletarProduto />} />
         </Routes>
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </Provider>
   )
 }
 
 
-  export default App;
+export default App;

@@ -11,136 +11,128 @@ import { addId, addToken } from '../../store/tokens/action'
 function Login() {
 
     let navigate = useNavigate();
-    let dispatch = useDispatch();
-    const [token, setToken] = useState('');
-    const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
-        {
-            idLogin: 0,
-            usuarioLogin: '',
-            senhaLogin: '',
-            tokenLogin: ''
-        }
 
-    )
+    let dispatch = useDispatch()
+
+    const [token, setToken] = useState('');
+
+    const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>({
+        idLogin: 0,
+        usuarioLogin: '',
+        senhaLogin: '',
+        tokenLogin: ''
+    });
+
+    // Crie mais um State para pegar os dados retornados a API
+    const [respUsuarioLogin, setRespUsuarioLogin] = useState<UsuarioLogin>({
+        idLogin: 0,
+        usuarioLogin: '',
+        senhaLogin: '',
+        tokenLogin: ''
+    })
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUsuarioLogin({
             ...usuarioLogin,
-            [e.target.name]: e.target.value
-        })
+            [e.target.name]: e.target.value,
+        });
     }
 
     useEffect(() => {
         if (token !== '') {
             dispatch(addToken(token))
-            navigate('/home')
+            navigate('/home');
         }
-    }, [token])
+    }, [token]);
 
     useEffect(() => {
-        if (usuarioLogin.tokenLogin !== "") {
+        if (respUsuarioLogin.tokenLogin !== "") {
 
             // Verifica os dados pelo console (Opcional)
-            console.log("Token: " + usuarioLogin.tokenLogin)
-            console.log("ID: " + usuarioLogin.idLogin)
+            console.log("Token: " + respUsuarioLogin.tokenLogin)
+            console.log("ID: " + respUsuarioLogin.idLogin)
 
             // Guarda as informações dentro do Redux (Store)
-            dispatch(addToken(usuarioLogin.tokenLogin))
-            dispatch(addId(usuarioLogin.idLogin.toString()))    // Faz uma conversão de Number para String
+            dispatch(addToken(respUsuarioLogin.tokenLogin))
+            dispatch(addId(respUsuarioLogin.idLogin.toString()))    // Faz uma conversão de Number para String
             navigate('/home')
         }
-    }, [usuarioLogin.tokenLogin])
+    }, [respUsuarioLogin.tokenLogin])
 
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+    async function logar(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuario/logar`, usuarioLogin, setToken)
-            alert('Usuário logado com sucesso!');
-            console.log(usuarioLogin);
+            await login(`/usuario/logar`, usuarioLogin, setRespUsuarioLogin);
 
+            alert('Usuário logado com sucesso!');
         } catch (error) {
-            alert('Dados inconsistentes')
+            alert('Dados do usuário inconsistentes. Erro ao logar!');
         }
     }
 
     return (
-        <Grid
-            container
-            direction='row'
-            justifyContent='center'
-            alignItems='center'>
-            <Grid alignItems='center' xs={6}>
-                <Box paddingX={20}>
-                    <form onSubmit={onSubmit}>
-                        <Typography
-                            variant='h3'
-                            gutterBottom
-                            color='textPrimary'
-                            align='center'
-                            component='h3'
-                            className='textos1'>
-                            Entrar
-                        </Typography>
-                        <TextField
-                            value={usuarioLogin.usuarioLogin}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id="usuario"
-                            label="E-mail"
-                            variant='outlined'
-                            name='usuarioLogin'
-                            margin='normal'
-                            fullWidth
-                        />
-                        <TextField
-                            value={usuarioLogin.senhaLogin}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id="senha"
-                            label="Senha"
-                            variant='outlined'
-                            name='senhaLogin'
-                            margin='normal'
-                            type='password'
-                            fullWidth
-                        />
-                        <Box marginTop={2} textAlign='center'>
-                            <Button
-                                type='submit'
-                                variant='contained'
-                                className='button'>
-                                Logar
-                            </Button>
-                        </Box>
-                    </form>
-                    <Box
-                        display='flex'
-                        justifyContent='center'
-                        marginTop={2}>
-                        <Box marginRight={1}>
-                            <Typography
-                                variant="subtitle1"
-                                color="initial"
-                                gutterBottom
-                                align='center'>
-                                Não tem uma conta?
-                            </Typography>
-                        </Box>
-                        <Link to='/cadastro'>
-                            <Typography
-                                variant="subtitle1"
-                                color="initial"
-                                gutterBottom
-                                align='center'
-                                className='textos1'>
-                                Cadastre-se
-                            </Typography>
-                        </Link>
-                    </Box>
-                </Box>
-            </Grid>
-            <Grid xs={6} className='imagem'>
-
-            </Grid>
+        <Grid container direction="row" justifyContent="center" alignItems="center">
+        <Grid alignItems="center" xs={6}>
+          <Box paddingX={20}>
+            <form onSubmit={logar}>
+              <Typography
+                variant="h3"
+                gutterBottom
+                color="textPrimary"
+                component="h3"
+                align="center"
+                className="textos1"
+              >
+                Entrar
+              </Typography>
+              <TextField
+                value={usuarioLogin.usuarioLogin}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="usuario"
+                label="usuário"
+                variant="outlined"
+                name="usuarioLogin"
+                margin="normal"
+                fullWidth
+              />
+              <TextField
+                value={usuarioLogin.senhaLogin}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="senha"
+                label="senha"
+                variant="outlined"
+                name="senhaLogin"
+                margin="normal"
+                type="password"
+                fullWidth
+              />
+              <Box marginTop={2} textAlign="center">
+                <Button type="submit" variant="contained" color="primary">
+                  Logar
+                </Button>
+              </Box>
+            </form>
+            <Box display="flex" justifyContent="center" marginTop={2}>
+              <Box marginRight={1}>
+                <Typography variant="subtitle1" gutterBottom align="center">
+                  Não tem uma conta?
+                </Typography>
+              </Box>
+              <Link to="/cadastro">
+                <Typography
+                  variant="subtitle1"
+                  gutterBottom
+                  align="center"
+                  className="textos1"
+                >
+                  Cadastre-se
+                </Typography>
+              </Link>
+            </Box>
+          </Box>
         </Grid>
+        <Grid xs={6} className="imagem"></Grid>
+      </Grid>
     )
 }
 
