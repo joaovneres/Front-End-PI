@@ -5,22 +5,137 @@
    background-color: aliceblue;
 }
 
-.box-text-d{
-    background-color: antiquewhite;
-    padding-left: 5vw;
-    padding-right: 5vw;
-}
-
-.box-text-e{
-    background-color: aliceblue;
-    padding-left: 5vw;
-    padding-right: 5vw;
-}
-
 .titulo{
-    color:black !important;
+    color: black !important;
+    padding-bottom: 20px;
+    font-size: 32px !important;
 }
 
 .descricao{
-    font-size: x-large!important;
+    font-size: 20px !important;
 }
+
+/* Projeto */
+
+.projeto{
+    padding-left: 10vw;
+    padding-right: 40px;
+    color: rgb(0, 0, 0);
+    height: 95vh;
+    background-color: rgba(18, 229, 124, 0.539);
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.imgProjeto{
+    background-image: url();
+}
+
+/* Importancia */
+
+.importancia{
+    padding-left: 40px;
+    padding-right: 10vw;
+    color: rgb(0, 0, 0);
+    height: 95vh;
+    background-color: #0d84dab1;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container-d{
+    display: flex;
+    justify-content: end;
+}
+
+/* A equipe */
+.containerEquipe{
+    height: 100vh;
+    padding-top: 15vh;
+}
+
+.equipeTitulo{
+    margin-left: 10vw;
+}
+
+.equipeParagrafo{
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Card */
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 15%;
+    margin: 1vw;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card-link{
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+
+  /* Missão visão e valores  */
+
+  .container-mvv{
+    padding-top: 30vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .missao{
+    font-size: 24px;
+    margin-right: 2vw;
+    text-align: center;
+    width: 25vw;
+    height: 50vh;
+  }
+
+  .visao{
+    font-size: 24px;
+    text-align: center;
+    width: 25vw;
+    height: 50vh;
+    background-color: #0d84dab1;
+  }
+
+  .valores{
+    font-size: 24px;
+    margin-left: 2vw;
+    text-align: center;
+    width: 25vw;
+    height: 50vh;
+  }
