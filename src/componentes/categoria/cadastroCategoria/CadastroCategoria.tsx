@@ -4,9 +4,10 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Categoria from '../../../models/Categoria';
 import { buscaId, post, put } from '../../../services/Service';
-import { Button, Container, TextField, Typography } from '@material-ui/core';
+import { Button, Container, Grid, TextField, Typography } from '@material-ui/core';
 import './CadastroCategoria.css';
 import { Slide, toast } from 'react-toastify';
+import { Box } from '@mui/material';
 
 
 function CadastroCategoria() {
@@ -153,52 +154,59 @@ function CadastroCategoria() {
 
   return (
     <>
-      <Container maxWidth="sm" className="topo">
-        <form onSubmit={onSubmit}>
-          <Typography
-            variant="h3"
-            color="textSecondary"
-            component="h1"
-            align="center"
-          >
-            Cadastre uma nova categoria
-          </Typography>
-          <TextField
-            id="descricao"
-            label="Descrição"
-            variant="outlined"
-            name="tipoCategoria"
-            margin="normal"
-            fullWidth
-            value={categoria.tipoCategoria}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
-          />
-          <TextField
-            id="descricao"
-            label="Qual o tamanho? "
-            variant="outlined"
-            name="tamanhoCategoria"
-            margin="normal"
-            fullWidth
-            value={categoria.tamanhoCategoria}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
-          />
-          <TextField
-            id="descricao"
-            label="é alimenticia?"
-            variant="outlined"
-            name="alimenticiaCategoria"
-            margin="normal"
-            fullWidth
-            value={categoria.alimenticiaCategoria}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
-          />
+      <Grid xs={12} className='teste-c'>
+        <Box paddingX={60} paddingY={13}>
+          <div id='form-c'>
+            <form onSubmit={onSubmit}>
+              <Typography
+                variant="h3"
+                color="textSecondary"
+                component="h1"
+                align="center"
+                className='titulo-c'>
+                Cadastre uma nova categoria
+              </Typography>
+              <TextField
+                id="descricao"
+                label="Descrição"
+                variant="outlined"
+                name="tipoCategoria"
+                margin="normal"
+                fullWidth
+                value={categoria.tipoCategoria}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
+              />
+              <TextField
+                id="descricao"
+                label="Qual o tamanho? "
+                variant="outlined"
+                name="tamanhoCategoria"
+                margin="normal"
+                fullWidth
+                value={categoria.tamanhoCategoria}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
+              />
+              <TextField
+                id="descricao"
+                label="é alimenticia?"
+                variant="outlined"
+                name="alimenticiaCategoria"
+                margin="normal"
+                fullWidth
+                value={categoria.alimenticiaCategoria}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
+              />
 
-          <Button type="submit" variant="contained" color="primary">
-            Finalizar
-          </Button>
-        </form>
-      </Container>
+              <Button
+                className='finalizar'
+                type="submit"
+                variant="contained" >
+                Finalizar
+              </Button>
+            </form>
+          </div>
+        </Box>
+      </Grid>
     </>
   )
 }
