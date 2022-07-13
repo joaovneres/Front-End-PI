@@ -35,12 +35,13 @@ function Navbar() {
                             <img alt='Logo Botanic House' src="https://i.imgur.com/rgsqm4w.png" className='logo-navbar' />
                         </Box>
                     </Link>
-                    <Box display="flex" justifyContent="start" className='card-nav'>
-                        <Link to='/home' className='links'>
-                            <Box mx={1} className='cursor card-nav'>
-                                <Typography variant="h6" className='navegar'>
+                    <Box display="flex" justifyContent="start" >
+                        <Link to='/home' >
+                            <Box mx={1}>
+                            <button className="buttonf"><span> Home </span></button>
+                                {/* <Typography variant="h6" className='button'>
                                     Início
-                                </Typography>
+                                </Typography> */}
                             </Box>
                         </Link>
                         <Link to='/formularioProduto' className='links'>
@@ -85,38 +86,61 @@ function Navbar() {
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start" className='card-nav'>
-                        <Link to='/home' className='links'>
-                            <Box mx={1} className='cursor card-nav'>
-                                <Typography variant="h6" className='navegar'>
+                    <Link to='/home' >
+                            <Box mx={1}>
+                            <button className="buttonf"><span> Home </span></button>
+                                {/* <Typography variant="h6" className='button'>
                                     Início
-                                </Typography>
+                                </Typography> */}
                             </Box>
                         </Link>
-                        <Link to='/formularioProduto' className='tdn links'>
+                        {/* <Link to='/formularioProduto' className='tdn links'>
                             <Box mx={1} className='cursor card-nav'>
                                 <Typography variant="h6" className='navegar'>
                                     Produto
                                 </Typography>
                             </Box>
+                        </Link> */}
+                        <Link to='/formularioProduto' >
+                            <Box mx={1}>
+                            <button className="buttonf"><span> Produto </span></button>
+                                {/* <Typography variant="h6" className='button'>
+                                    Início
+                                </Typography> */}
+                            </Box>
                         </Link>
-                        <Link to='/formularioCategoria' className='links'>
+                        {/* <Link to='/formularioCategoria' className='links'>
                             <Box mx={1} className='cursor card-nav'>
                                 <Typography variant="h6" className='navegar'>
                                     Categorias
                                 </Typography>
                             </Box>
+                        </Link> */}
+                        <Link to='/formularioCategoria' >
+                            <Box mx={1}>
+                            <button className="buttonf"><span> Categorias </span></button>
+                                {/* <Typography variant="h6" className='button'>
+                                    Início
+                                </Typography> */}
+                            </Box>
                         </Link>
-                        <Link to='/sobre' className='links'>
+                        {/* <Link to='/sobre' className='links'>
                             <Box mx={1} className='cursor card-nav'>
                                 <Typography variant="h6" className='navegar'>
                                     Sobre
                                 </Typography>
                             </Box>
+                        </Link> */}
+                        <Link to='/sobre' >
+                            <Box mx={1}>
+                            <button className="buttonf"><span> Sobre </span></button>
+                                {/* <Typography variant="h6" className='button'>
+                                    Início
+                                </Typography> */}
+                            </Box>
                         </Link>
                         <Box className='links cursor card-nav' onClick={goLogout}>
-                            <Typography variant="h6" className='navegar'>
-                                Sair
-                            </Typography>
+                        <button className="buttonf"><span> Sair </span></button>
                         </Box>
                     </Box>
                 </Toolbar>
