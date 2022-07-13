@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { Slide, toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
 import { buscar } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -19,7 +20,19 @@ function ListaCategoria() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você tem que estar logado');
+
+            toast.warning('Você precisa logar.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
+
             navigate('/logar');
         }
     }, [token]);
@@ -30,7 +43,6 @@ function ListaCategoria() {
                 Authorization: token,
             },
         });
-        console.log(categorias);
     }
 
     useEffect(() => {

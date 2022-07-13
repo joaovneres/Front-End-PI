@@ -6,12 +6,25 @@ import './Navbar.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/action';
+import { Slide, toast } from 'react-toastify';
 
 function Navbar() {
 
     function goLogout() {
         dispatch(addToken(''))
-        alert("Usuário deslogado")
+
+        toast.success('Usuário saiu com sucesso.', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+            transition: Slide,
+        });
+
         navigate('/logar')
     }
 
@@ -125,7 +138,7 @@ function Navbar() {
 
     if (rota.pathname === '/logar' || rota.pathname === '/cadastro') {
         navbarComponent = (<></>)
-      }
+    }
 
     return (
         <>

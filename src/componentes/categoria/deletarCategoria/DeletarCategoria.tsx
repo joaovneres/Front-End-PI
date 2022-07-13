@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import { Slide, toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
 import { buscaId, deleteId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -20,7 +21,19 @@ function DeletarCategoria() {
     // Verifiicando se o usuário está logado
     useEffect(() => {
         if (token === '') {
-            alert('Você não está logado !')
+
+            toast.warning('Você precisa logar, para deletar uma categoria.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
+
             navigate('/logar')
         }
     }, [token])
@@ -40,13 +53,41 @@ function DeletarCategoria() {
     }, [idCategoria])
 
     async function sim() {
-        await deleteId(`/categoria/${idCategoria}`, {
-            headers: {
-                Authorization: token,
-            }
-        })
-        alert('Tema apagado com sucesso (teoricamente)');
-        navigate('/categoria')
+        try {
+            await deleteId(`/categoria/${idCategoria}`, {
+                headers: {
+                    Authorization: token,
+                }
+            })
+
+            toast.success('Categoria deletada com sucesso.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
+
+            navigate('/categoria')
+        } catch (error) {
+            console.log(`Erro ao deletar: ` + error);
+
+            toast.error('Erro ao deletar categoria.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
+        }
     }
 
     function nao() {

@@ -6,8 +6,11 @@ import Categoria from '../../../models/Categoria';
 import { buscaId, post, put } from '../../../services/Service';
 import { Button, Container, TextField, Typography } from '@material-ui/core';
 import './CadastroCategoria.css';
+import { Slide, toast } from 'react-toastify';
+
 
 function CadastroCategoria() {
+
   //Navegar entre as telas
   let navigate = useNavigate()
   const { idCategoria } = useParams<{ idCategoria: string }>()
@@ -27,7 +30,19 @@ function CadastroCategoria() {
   // Verfica se o usuario está logado quando a tela é carregada
   useEffect(() => {
     if (token === '') {
-      alert('Ta tirando já');
+
+      toast.warning('Você precisa logar, para cadastrar uma categoria.', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        transition: Slide,
+      });
+
       navigate('/logar');
     }
   }, [token]);
@@ -63,10 +78,34 @@ function CadastroCategoria() {
             Authorization: token,
           },
         });
-        alert('A categoria foi atualizada');
+
+        toast.success('Categoria atualizada com sucesso.', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+          transition: Slide,
+        });
+
       } catch (error) {
         console.log(`Deu erro: ${error}`);
-        alert('Erro, por favor, verifique os campos');
+
+        toast.error('Erro ao atualizar categoria, tente novamente.', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+          transition: Slide,
+        });
+
       }
     } else {
       try {
@@ -75,10 +114,34 @@ function CadastroCategoria() {
             Authorization: token,
           },
         });
-        alert('Tema cadastrado com sucesso');
+
+        toast.success('Categoria cadastrada com sucesso.', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+          transition: Slide,
+        });
+
       } catch (error) {
         console.log(`Deu erro: ${error}`);
-        alert('Erro, por favor, verifique os campos');
+
+        toast.error('Erro ao cadastrar categoria, tente novamente.', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+          transition: Slide,
+        });
+
       }
     }
     back();
