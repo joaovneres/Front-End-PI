@@ -126,20 +126,18 @@ function CadastroUsuario() {
             direction='row'
             justifyContent='center'
             alignItems='center'
+            className='backGround'
 
         >
             <Grid
                 item
                 xs={6}
-                className='imagem2'>
-            </Grid>
-            <Grid
-                item
-                xs={6}
-                alignItems='center'>
+                alignItems='center'
+                className='formulario2'
+                >
                 <Box
                     paddingX={10}>
-                    <form onSubmit={onSubmit}>
+                    <form className='p-40' onSubmit={onSubmit}>
                         <Typography
                             variant='h3'
                             gutterBottom
@@ -202,7 +200,7 @@ function CadastroUsuario() {
                                 </Button>
                             </Link>
                             <Button
-                                className='cadastrar'
+                                className='botaoCadastrar'
                                 variant='contained'
                                 type='submit'>
                                 Cadastrar
@@ -210,6 +208,11 @@ function CadastroUsuario() {
                         </Box>
                     </form>
                 </Box>
+            </Grid>
+            <Grid
+                item
+                xs={4}
+            >
             </Grid>
         </Grid >
     )

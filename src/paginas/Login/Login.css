@@ -34,10 +34,10 @@
 .botaoLogar{
     font-size: 17px !important;
     color: #ffffff !important;
-    background-color: #34b99f !important;
+    background-color: #e633ff !important;
 }
 .botaoLogar:hover{
-    background-color: #e633ff !important;
+    background-color: #34b99f !important;
 }
 
 .branco{
