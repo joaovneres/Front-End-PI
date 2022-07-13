@@ -98,7 +98,7 @@ function CadastroCategoria() {
             component="h1"
             align="center"
           >
-            Formulário de cadastro de tema
+            Cadastre uma nova categoria
           </Typography>
           <TextField
             id="descricao"
@@ -112,7 +112,7 @@ function CadastroCategoria() {
           />
           <TextField
             id="descricao"
-            label="Descrição"
+            label="Qual o tamanho? "
             variant="outlined"
             name="tamanhoCategoria"
             margin="normal"
@@ -122,7 +122,7 @@ function CadastroCategoria() {
           />
           <TextField
             id="descricao"
-            label="Descrição"
+            label="é alimenticia?"
             variant="outlined"
             name="alimenticiaCategoria"
             margin="normal"
