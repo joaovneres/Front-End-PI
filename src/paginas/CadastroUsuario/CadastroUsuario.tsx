@@ -1,18 +1,11 @@
-// import React, { ChangeEvent, useEffect, useState } from 'react';
-// import { Grid, Button, TextField } from '@material-ui/core';
-// import { Box, Typography } from '@mui/material';
-// import { Link, useNavigate } from 'react-router-dom';
-// import './CadastroUsuario.css';
-// import Usuario from '../../models/Usuario';
-// import { cadastroUsuario } from '../../services/Service';
-
-import React , {useState, useEffect, ChangeEvent } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Usuario from '../../models/Usuario';
 import { cadastroUsuario } from '../../services/Service';
 import { Grid, Box, Typography, Button, TextField } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
+import { Slide, toast } from 'react-toastify';
 
 
 function CadastroUsuario() {
@@ -40,16 +33,14 @@ function CadastroUsuario() {
         if (usuarioResult.idUsuario !== 0) {
             navigate("/logar")
         }
-    // eslint-disable-next-line
     }, [usuarioResult])
 
 
-    function confirmarSenhaHandle(e:ChangeEvent<HTMLInputElement>) {
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
         setConfirmarSenha(e.target.value)
     }
 
-
-    function updatedModel(e:ChangeEvent<HTMLInputElement>) {
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
         setUsuario({
             ...usuario,
@@ -57,27 +48,78 @@ function CadastroUsuario() {
         })
 
     }
-    async function onSubmit(e:ChangeEvent<HTMLFormElement>) {
+
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        if(usuario.senhaUsuario === "" || usuario.nomeUsuario === "" || usuario.emailUsuario === ""){
-            alert('Possui campos vazios')
+        if (usuario.senhaUsuario === "" || usuario.nomeUsuario === "" || usuario.emailUsuario === "") {
+            toast.warning('Verifique os campos.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
         }
-        else if (usuario.emailUsuario.includes("@") === false || usuario.emailUsuario.includes(".com") === false){
-            alert('Formato esperado no campo e-mail: email@email.com')
+        else if (usuario.emailUsuario.includes("@") === false || usuario.emailUsuario.includes(".com") === false) {
+            toast.warning('Formato esperado no campo e-mail: email@email.com', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
         }
         else if (usuario.senhaUsuario.length < 8) {
-            alert('A senha deve conter ao menos 8 digitos')
+            toast.warning('A senha deve conter ao menos 8 digitos', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
         }
         else if (confirmarSenha !== usuario.senhaUsuario) {
-            alert('As senhas não correspondem')
+            toast.warning('As senhas não correspondem', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
         }
         // O usuário só será cadastrado se todas as condições acima forem satisfeitas  
         else {
             cadastroUsuario(`/usuario/cadastrar`, usuario, setUserResult)
-            alert('usuario cadastrado')
+            toast.success('Usuário cadastrado com sucesso', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                transition: Slide,
+            });
         }
     }
-    
+
     return (
         <Grid
             container
@@ -105,12 +147,12 @@ function CadastroUsuario() {
                             align='center'
                             component='h3'
                             className='textos2'
-                            >
+                        >
                             Cadastrar
                         </Typography>
                         <TextField
-                            value={ usuario.nomeUsuario }
-                             onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            value={usuario.nomeUsuario}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id="nome"
                             label="nome"
                             variant='outlined'
@@ -119,8 +161,8 @@ function CadastroUsuario() {
                             fullWidth
                         />
                         <TextField
-                            value={ usuario.emailUsuario }
-                            onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e) }
+                            value={usuario.emailUsuario}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id="usuario"
                             label="e-mail"
                             variant='outlined'
@@ -129,8 +171,8 @@ function CadastroUsuario() {
                             fullWidth
                         />
                         <TextField
-                            value={ usuario.senhaUsuario }
-                            onChange={ (e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            value={usuario.senhaUsuario}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id="senha"
                             label="senha"
                             variant='outlined'
@@ -140,8 +182,8 @@ function CadastroUsuario() {
                             type='password'
                         />
                         <TextField
-                            value={ confirmarSenha }
-                            onChange={ (e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
+                            value={confirmarSenha}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
                             id="confirmarSenha"
                             label="confirmar senha"
                             variant='outlined'
