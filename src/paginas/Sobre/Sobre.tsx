@@ -53,10 +53,8 @@ function Sobre() {
                                 <h1>Cristiano</h1>
                                 <p className="title">CEO & Founder, Example</p>
                                 <p>Harvard University</p>
-                                <a href="#"><i className="fa fa-dribbble"></i></a>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
-                                <a href="#"><i className="fa fa-linkedin"></i></a>
-                                <a href="#"><i className="fa fa-facebook"></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
                                 <p><button>Contact</button></p>
                             </div>
                             <div className="card">
@@ -64,10 +62,8 @@ function Sobre() {
                                 <h1>Cristiano</h1>
                                 <p className="title">CEO & Founder, Example</p>
                                 <p>Harvard University</p>
-                                <a href="#"><i className="fa fa-dribbble"></i></a>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
-                                <a href="#"><i className="fa fa-linkedin"></i></a>
-                                <a href="#"><i className="fa fa-facebook"></i></a>
+                                <a href="#" className='card-link' ><i className="fa fa-linkedin" ></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
                                 <p><button>Contact</button></p>
                             </div>
                             <div className="card">
@@ -75,10 +71,8 @@ function Sobre() {
                                 <h1>Cristiano</h1>
                                 <p className="title">CEO & Founder, Example</p>
                                 <p>Harvard University</p>
-                                <a href="#"><i className="fa fa-dribbble"></i></a>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
-                                <a href="#"><i className="fa fa-linkedin"></i></a>
-                                <a href="#"><i className="fa fa-facebook"></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
                                 <p><button>Contact</button></p>
                             </div>
                             <div className="card">
@@ -86,10 +80,8 @@ function Sobre() {
                                 <h1>Cristiano</h1>
                                 <p className="title">CEO & Founder, Example</p>
                                 <p>Harvard University</p>
-                                <a href="#"><i className="fa fa-dribbble"></i></a>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
-                                <a href="#"><i className="fa fa-linkedin"></i></a>
-                                <a href="#"><i className="fa fa-facebook"></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
                                 <p><button>Contact</button></p>
                             </div>
                             <div className="card">
@@ -97,10 +89,8 @@ function Sobre() {
                                 <h1>Cristiano</h1>
                                 <p className="title">CEO & Founder, Example</p>
                                 <p>Harvard University</p>
-                                <a href="#"><i className="fa fa-dribbble"></i></a>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
-                                <a href="#"><i className="fa fa-linkedin"></i></a>
-                                <a href="#"><i className="fa fa-facebook"></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
                                 <p><button>Contact</button></p>
                             </div>
                         </Box>
@@ -108,18 +98,10 @@ function Sobre() {
                 </Grid>
                 {/*  Missão Visão e Valores */}
 
-                <Grid item xs={12} className='imgProjeto'>
-                    <Grid xs={7}>
-                        <Box className="projeto">
-                            <Typography variant='h5' className='titulo'>
-                                O Projeto
-                            </Typography>
-                            <Typography className='descricao'>
-                                A BotanicHouse® é uma plataforma e-commerce criada com o objetivo de conectar consumidores do eixo urbano das grandes cidades com os produtores rurais de plantas ornamentais, silvestres e alimentícias. (verificar categorias)
-                                Aqui você poderá navegar entre nossas categorias e escolher as espécies de plantas que mais lhe agrada e se adaptam ao seu ambiente. Com uma breve descrição, você facilmente saberá se sua escolha é adequada ao seu tipo de ambiente e receber sua muda direto em sua residência, contribuindo para um mundo mais verde e sustentável.
-                            </Typography>
-                        </Box>
-                    </Grid>
+                <Grid item xs={12} className='container-mvv'>
+                    <Grid className='missao'>Missão</Grid>
+                    <Grid className='visao'>Visão</Grid>
+                    <Grid className='valores'>Valores</Grid>
                 </Grid>
             </Grid>
         </>
