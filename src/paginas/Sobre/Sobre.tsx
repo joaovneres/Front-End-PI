@@ -6,11 +6,6 @@ function Sobre() {
     return (
         <>
             <Grid container className="caixa">
-                {/*  Foto de capa */}
-                <Grid item xs={12} >
-                    <img src="https://blog.prepara.me/wp-content/uploads/2021/06/Capas-LinkedIn-8-1024x266.png" alt='teste' width="100%" />
-                </Grid>
-
                 {/* O projeto */}
                 <Grid item xs={12} className='imgProjeto'>
                     <Grid xs={7}>
@@ -51,47 +46,47 @@ function Sobre() {
                             <div className="card">
                                 <img src="https://i.imgur.com/Yovj25U.jpg" alt="John" width='100%' />
                                 <h1>Cristiano</h1>
-                                <p className="title">CEO & Founder, Example</p>
-                                <p>Harvard University</p>
-                                <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
-                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
-                                <p><button>Contact</button></p>
+                                <p className="title">Desenvolvedor FullStack Java Jr.</p>
+                                <div className="box-link">
+                                    <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                </div>
                             </div>
                             <div className="card">
                                 <img src="https://i.imgur.com/sO00v9W.png" alt="John" width='100%' />
-                                <h1>Cristiano</h1>
-                                <p className="title">CEO & Founder, Example</p>
-                                <p>Harvard University</p>
-                                <a href="#" className='card-link' ><i className="fa fa-linkedin" ></i></a>
-                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
-                                <p><button>Contact</button></p>
+                                <h1>Neres</h1>
+                                <p className="title">Desenvolvedor FullStack Java Jr.</p>
+                                <div className="box-link">
+                                    <a href="#" className='card-link'><i className="fa fa-linkedin" ></i></a>
+                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                </div>
                             </div>
                             <div className="card">
                                 <img src="https://i.imgur.com/Yovj25U.jpg" alt="John" width='100%' />
-                                <h1>Cristiano</h1>
-                                <p className="title">CEO & Founder, Example</p>
-                                <p>Harvard University</p>
-                                <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
-                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
-                                <p><button>Contact</button></p>
+                                <h1>Carlos</h1>
+                                <p className="title">Desenvolvedor FullStack Java Jr.</p>
+                                <div className="box-link">
+                                    <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                </div>
                             </div>
                             <div className="card">
                                 <img src="https://i.imgur.com/Yovj25U.jpg" alt="John" width='100%' />
-                                <h1>Cristiano</h1>
-                                <p className="title">CEO & Founder, Example</p>
-                                <p>Harvard University</p>
-                                <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
-                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
-                                <p><button>Contact</button></p>
+                                <h1>Eric</h1>
+                                <p className="title">Desenvolvedor FullStack Java Jr.</p>
+                                <div className="box-link">
+                                    <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                </div>
                             </div>
                             <div className="card">
                                 <img src="https://i.imgur.com/Yovj25U.jpg" alt="John" width='100%' />
-                                <h1>Cristiano</h1>
-                                <p className="title">CEO & Founder, Example</p>
-                                <p>Harvard University</p>
-                                <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
-                                <a href="#" className='card-link'><i className="fa fa-github"></i></a>
-                                <p><button>Contact</button></p>
+                                <h1>Cirano</h1>
+                                <p className="title">Desenvolvedor FullStack Java Jr.</p>
+                                <div className="box-link">
+                                    <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                </div>
                             </div>
                         </Box>
                     </Box>

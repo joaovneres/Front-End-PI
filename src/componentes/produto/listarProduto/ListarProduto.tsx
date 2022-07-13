@@ -60,6 +60,7 @@ function ListarProduto() {
                 <Typography variant="h5" component="h2">
                   {produto.nomeProduto}
                 </Typography>
+                <img src={produto.imgProduto} alt="Produto"/>
                 <Typography variant="body2" component="p">
                   {produto.valorProduto}
                 </Typography>
