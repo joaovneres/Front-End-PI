@@ -19,12 +19,11 @@
 }
 
 /* Projeto */
-
 .projeto{
     padding-left: 10vw;
     padding-right: 3vw;
     color: rgb(0, 0, 0);
-    height: 50vh;
+    height: 75vh;
     background-color: #11AD8E;
     vertical-align: middle;
     display: table-cell;
@@ -32,6 +31,8 @@
 
 .imgProjeto{
     background-image: url();
+    display: flex;
+    flex-direction: row;
 }
 
 /* Importancia */
@@ -40,7 +41,7 @@
     padding-left: 3vw;
     padding-right: 10vw;
     color: rgb(0, 0, 0);
-    height: 50vh;
+    height: 75vh;
     background-color: #F399FF;
     display: table-cell;
     vertical-align: middle;
@@ -53,8 +54,8 @@
 
 /* A equipe */
 .containerEquipe{
-    height: 95vh;
-    padding-top: 10vh;
+    height: 100vh;
+    padding-top: 5vh;
     background-color: #4DC2AA;
 }
 

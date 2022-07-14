@@ -19,6 +19,11 @@ function Sobre() {
                             </Typography>
                         </Box>
                     </Grid>
+                    <Grid xs={4}>
+                        <Box>
+                            <img src="https://i.imgur.com/JRxNxwv.png"  />
+                        </Box>
+                    </Grid>
                 </Grid>
 
                 {/*  A importância */}
@@ -48,8 +53,8 @@ function Sobre() {
                                 <h1>Cristiano</h1>
                                 <p className="title">Desenvolvedor FullStack Java Jr.</p>
                                 <div className="box-link">
-                                    <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
-                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/cristianotp/" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                    <a href="https://github.com/Cr7stian8" className='card-link'><i className="fa fa-github"></i></a>
                                 </div>
                             </div>
                             <div className="card">
@@ -57,8 +62,8 @@ function Sobre() {
                                 <h1>Neres</h1>
                                 <p className="title">Desenvolvedor FullStack Java Jr.</p>
                                 <div className="box-link">
-                                    <a href="#" className='card-link'><i className="fa fa-linkedin" ></i></a>
-                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/jvneres/" className='card-link'><i className="fa fa-linkedin" ></i></a>
+                                    <a href="https://github.com/joaovneres" className='card-link'><i className="fa fa-github"></i></a>
                                 </div>
                             </div>
                             <div className="card">
@@ -66,8 +71,8 @@ function Sobre() {
                                 <h1>Carlos</h1>
                                 <p className="title">Desenvolvedor FullStack Java Jr.</p>
                                 <div className="box-link">
-                                    <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
-                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/carlos-rene-82b572239/" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                    <a href="https://github.com/CarlosRene987" className='card-link'><i className="fa fa-github"></i></a>
                                 </div>
                             </div>
                             <div className="card">
@@ -75,8 +80,8 @@ function Sobre() {
                                 <h1>Eric</h1>
                                 <p className="title">Desenvolvedor FullStack Java Jr.</p>
                                 <div className="box-link">
-                                    <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
-                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/ericalanlima/" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                    <a href="https://github.com/eric-aln" className='card-link'><i className="fa fa-github"></i></a>
                                 </div>
                             </div>
                             <div className="card">
@@ -84,8 +89,8 @@ function Sobre() {
                                 <h1>Cirano</h1>
                                 <p className="title">Desenvolvedor FullStack Java Jr.</p>
                                 <div className="box-link">
-                                    <a href="#" className='card-link'><i className="fa fa-linkedin"></i></a>
-                                    <a href="#" className='card-link'><i className="fa fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/cirano-alves-belardony-37a43515b/" className='card-link'><i className="fa fa-linkedin"></i></a>
+                                    <a href="https://github.com/CiranoB" className='card-link'><i className="fa fa-github"></i></a>
                                 </div>
                             </div>
                         </Box>
