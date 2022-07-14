@@ -39,11 +39,7 @@ function DeletarCategoria() {
     }, [token])
 
     async function findById(idCategoria: string) {
-        await buscaId(`/categoria/${idCategoria}`, setCategoria, {
-            headers: {
-                Authorization: token
-            }
-        })
+        await buscaId(`/categoria/buscar/${idCategoria}`, setCategoria);
     }
 
     useEffect(() => {
