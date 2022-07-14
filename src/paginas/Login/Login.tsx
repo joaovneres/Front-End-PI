@@ -11,6 +11,22 @@ import { toast, Slide } from 'react-toastify'
 
 function Login() {
 
+  function alertaSocialMedia(){
+
+    toast.info('O Neres é chato!', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      transition: Slide,
+  });
+  
+}
+
   let navigate = useNavigate();
 
   let dispatch = useDispatch()
@@ -64,7 +80,7 @@ function Login() {
     e.preventDefault();
     try {
       await login(`/usuario/logar`, usuarioLogin, setRespUsuarioLogin);
-      
+
       toast.success('Usuário logado com sucesso.', {
         position: "top-center",
         autoClose: 2000,
@@ -78,7 +94,7 @@ function Login() {
       });
 
     } catch (error) {
-      
+
       toast.error('Dados não conferem, tente novamente.', {
         position: "top-center",
         autoClose: 2000,
@@ -90,7 +106,7 @@ function Login() {
         theme: 'colored',
         transition: Slide,
       });
-      
+
     }
   }
 
@@ -166,29 +182,17 @@ function Login() {
 
 
           <Grid container direction="row"
-            justifyContent="space-around"
+            justifyContent="center"
             alignItems="center">
-              <Box>
-                            
-              </Box>
-            <Grid item xs={6} alignItems="center">
-              <Box >
-              
-            <a href ="https:www.google.com.br"><i><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png"
-                             width="50%"/></i></a></Box>
-
-              
-            </Grid>
-
-            <Grid item xs={6} alignItems="center">
-            <Box>
-              {/* <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="50%" /> */}
-              <a href ="https:www.google.com.br"><i><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
-                             width="50%" /></i></a></Box>
-            </Grid>
+            <Box className='boxSocialMedia' onClick={alertaSocialMedia}>
+              <i><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png"
+                width='40px' /></i>
+                </Box>
+            <Box className='boxSocialMedia' onClick={alertaSocialMedia}>
+              <i><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+                width='40px' /></i>
+                </Box>
           </Grid>
-
-
 
           <Box
             display="flex"

@@ -7,10 +7,22 @@
     margin-top: 1vh;
 }
 
+.logo-navbar-black{
+    height: 5vh;
+    margin-top: 1vh;
+    background-color: #000000;
+}
+
 .card-nav{
     background-color: #34b99f;
     justify-content: space-between;
 }
+
+.card-nav-black{
+    background-color: #000000;
+    justify-content: space-between;
+}
+
 
 .links{
     text-decoration: none;
@@ -63,6 +75,21 @@
     cursor: pointer;
     margin: 5px;
   }
+
+  .buttonf-black {
+    font-family: 'Heebo', sans-serif;
+    /* display: inline-block; */
+    border-radius: 4px;
+    background-color: #000000 !important;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 3px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
   
   .buttonf span {
     cursor: pointer;
@@ -85,6 +112,31 @@
   }
   
   .buttonf:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .buttonf-black span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .buttonf-black span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .buttonf-black:hover span {
+    padding-right: 25px;
+  }
+  
+  .buttonf-black:hover span:after {
     opacity: 1;
     right: 0;
   }
