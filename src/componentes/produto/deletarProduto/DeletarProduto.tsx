@@ -43,11 +43,7 @@ function DeletarProduto() {
   }, [idProduto])
 
   async function findPostById(idProduto: string) {
-    buscaId(`/postagens/${idProduto}`, setProduto, {
-      headers: {
-        Authorization: token,
-      }
-    })
+    buscaId(`/produto/buscar/${idProduto}`, setProduto);
   }
 
   async function sim() {

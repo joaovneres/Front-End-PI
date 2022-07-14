@@ -72,11 +72,7 @@ function CadastroProduto() {
   }, [token]);
 
   async function buscarCategoria() {
-    await buscar('/categoria', setCategorias, {
-      headers: {
-        Authorization: token,
-      },
-    });
+    await buscar('/categoria/buscar', setCategorias);
   }
 
   useEffect(() => {
@@ -95,11 +91,7 @@ function CadastroProduto() {
   }, [categoria]);
 
   async function findByIdProduto(idProduto: string) {
-    await buscaId(`/produto/${idProduto}`, setProduto, {
-      headers: {
-        Authorization: token,
-      },
-    });
+    await buscaId(`/produto/buscar/${idProduto}`, setProduto);
   }
 
   function updateProduto(e: ChangeEvent<HTMLInputElement>) {
@@ -278,11 +270,7 @@ function CadastroProduto() {
               labelId="selectCategoria-label"
               id="selectCategoria"
               onChange={(e) =>
-                buscaId(`/categoria/${e.target.value}`, setCategoria, {
-                  headers: {
-                    Authorization: token,
-                  },
-                })
+                buscaId(`/categoria/buscar/${e.target.value}`, setCategoria)
               }
             >
               {categorias.map((categoria) => (

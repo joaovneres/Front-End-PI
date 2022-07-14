@@ -1,46 +1,16 @@
 import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
-import { Slide, toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListarProduto() {
 
-  let navigate = useNavigate();
-
-  const token = useSelector<TokenState, TokenState['token']>(
-    (state) => state.token
-  )
-
   const [produtos, setProdutos] = useState<Produto[]>([])
 
-  useEffect(() => {
-    if (token === '') {
-      toast.warning('Você precisa logar.', {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-        transition: Slide,
-      });
-      navigate('/logar');
-    }
-  }, [token]);
-
   async function listarProdutos() {
-    await buscar('/produto', setProdutos, {
-      headers: {
-        Authorization: token,
-      }
-    });
+    await buscar('/produto/buscar', setProdutos);
   }
 
   useEffect(() => {
