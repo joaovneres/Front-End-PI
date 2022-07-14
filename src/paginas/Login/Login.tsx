@@ -168,15 +168,23 @@ function Login() {
           <Grid container direction="row"
             justifyContent="space-around"
             alignItems="center">
-            <Grid item xs={6}>
+              <Box>
+                            
+              </Box>
+            <Grid item xs={6} alignItems="center">
+              <Box >
+              
+            <a href ="https:www.google.com.br"><i><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png"
+                             width="50%"/></i></a></Box>
 
-
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png"
-               width="50%" />
+              
             </Grid>
 
-            <Grid item xs={6}>
-              <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="50%" />
+            <Grid item xs={6} alignItems="center">
+            <Box>
+              {/* <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="50%" /> */}
+              <a href ="https:www.google.com.br"><i><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+                             width="50%" /></i></a></Box>
             </Grid>
           </Grid>
 

@@ -65,7 +65,7 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link> */}
-                        <Link to='/formularioProduto' >
+                        <Link to='/produto' >
                             <Box mx={1}>
                             <button className="buttonf"><span> Produto </span></button>
                                 {/* <Typography variant="h6" className='button'>
@@ -80,7 +80,7 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link> */}
-                        <Link to='/formularioCategoria' >
+                        <Link to='/categoria' >
                             <Box mx={1}>
                             <button className="buttonf"><span> Categorias </span></button>
                                 {/* <Typography variant="h6" className='button'>
@@ -137,7 +137,7 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link> */}
-                        <Link to='/formularioProduto' >
+                        <Link to='/produto' >
                             <Box mx={1}>
                             <button className="buttonf"><span> Produto </span></button>
                                 {/* <Typography variant="h6" className='button'>
@@ -152,7 +152,7 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link> */}
-                        <Link to='/formularioCategoria' >
+                        <Link to='/categoria' >
                             <Box mx={1}>
                             <button className="buttonf"><span> Categorias </span></button>
                                 {/* <Typography variant="h6" className='button'>
