@@ -1,3 +1,67 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+/* Botões Atualizar e deletar */
+
+.deletar-c{
+    color: white;
+    background-color: #ef1010;
+}
+.deletar-c:hover{
+    color: white;
+    background-color: #f70808 !important;
+}
+
+.atualizar-c{
+    color: white !important;
+    background-color: #228b22 !important;
+}
+.atualizar-c:hover{
+    color: white;
+    background-color: #228b22 !important;
+}
+
+/* Alinhando linhas */
+.linha{
+    display: flex;
+    flex-direction: row;
+}
+
+.linhas{
+    margin-right: 10px;
+}
+
+/* Categoria - titulo */
+.categoria-t{
+    text-align: center;
+    margin-right: 30px;
+}
+
+.linha-t{
+    display: flex;
+    justify-content: center;
+}
+
+/* Botão Nova Categoria */
+.p{
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+
+/* Altura da Linha */
+
+.altura-l{
+    min-height: 100vh;
+}
+
+.nova-c{
+    text-decoration: none !important;
+}
+
+.just-center{
+    justify-content: center;
+}
