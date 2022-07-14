@@ -219,6 +219,19 @@ function Login() {
             </Link>
           </Box>
         </Box>
+        <Box
+            marginTop={1}>
+            <Link
+              to="/home">
+              <Typography
+                variant="subtitle1"
+                gutterBottom
+                align="center"
+                className="textos1">
+                Voltar a home
+              </Typography>
+            </Link>
+          </Box>
       </Grid>
     </Grid>
   )
