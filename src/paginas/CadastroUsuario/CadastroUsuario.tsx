@@ -131,7 +131,7 @@ function CadastroUsuario() {
         >
             <Grid
                 item
-                xs={6}
+                xs={5}
                 alignItems='center'
                 className='formulario2'
                 >
@@ -190,7 +190,7 @@ function CadastroUsuario() {
                             type='password'
                             fullWidth
                         />
-                        <Box marginTop={2} textAlign='center'>
+                        <Box marginTop={2} className="botaoCU">
                             <Link to='/logar' className='text-decorator-none'>
                                 <Button
                                     className='btnCancelar'

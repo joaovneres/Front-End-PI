@@ -29,7 +29,6 @@ function Home() {
               className='titulo'
             >Nome PI
             </Typography>
-
             <Typography
               variant="h5"
               gutterBottom
@@ -37,7 +36,16 @@ function Home() {
               component="h5"
               align="center"
               className='titulo'
-            >Explicação do projeto, falando que somos um e-commerce, slogan
+            >Mais vida, menos cinza!
+            </Typography>
+            <Typography
+              variant="h5"
+              gutterBottom
+              color="textPrimary"
+              component="h5"
+              align="center"
+              className='titulo'
+            >Transforme a cara do seu lar com nossos itens diretamente de produtores rurais.
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center">

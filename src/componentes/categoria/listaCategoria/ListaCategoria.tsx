@@ -70,7 +70,7 @@ function ListaCategoria() {
                                         <Typography
                                             variant="h5"
                                             component="h2">
-                                            {categoria.alimenticiaCategoria}
+                                            {categoria.alimenticiaCategoria?"Sim":"Não"}
                                         </Typography>
                                     </div>
                                 </div>

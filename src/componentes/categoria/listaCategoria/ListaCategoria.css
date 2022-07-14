@@ -25,7 +25,7 @@
 /* Alinhando linhas */
 .linha{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .linhas{
