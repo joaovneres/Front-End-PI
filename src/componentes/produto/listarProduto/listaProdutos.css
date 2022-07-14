@@ -1,0 +1,26 @@
+.container-produtos {
+    margin: 2vh;
+    justify-content: center;
+    min-height: 81vh;
+}
+
+.lista-produtos {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #d4f7be;
+    align-self: center;
+    border-radius: 1%;
+    box-shadow: 2px 2px #a9c598;
+}
+
+.img-list-prod img {
+    max-width: 100%;
+}
+
+.nomeProduto {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    margin: 0px;
+}
