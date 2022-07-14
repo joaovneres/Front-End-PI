@@ -1,152 +1,164 @@
-.caixa{
-   direction: row; 
-   justify-content: center;
-   align-items: center;
-   background-color: aliceblue;
+.caixa {
+  direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
 }
 
-.titulo{
-    color: black !important;
-    padding-bottom: 20px;
-    font-size: 32px !important;
-    font-family: 'Delmon Delicate', sans-serif !important;
+.titulo {
+  color: black !important;
+  padding-bottom: 20px;
+  font-size: 32px !important;
+  font-family: 'Delmon Delicate', sans-serif !important;
 }
 
-.descricao{
-    font-size: 20px !important;
-    text-align: justify;
-    
+.descricao {
+  font-size: 20px !important;
+  text-align: justify;
+
 }
 
 /* Projeto */
-.projeto{
-    padding-left: 10vw;
-    padding-right: 3vw;
-    color: rgb(0, 0, 0);
-    height: 75vh;
-    background-color: #11AD8E;
-    vertical-align: middle;
-    display: table-cell;
+.projeto {
+  padding-left: 10vw;
+  padding-right: 3vw;
+  color: rgb(0, 0, 0);
+  height: 75vh;
+  background-color: #11AD8E;
+  vertical-align: middle;
+  display: table-cell;
 }
 
-.imgProjeto{
-    background-image: url();
-    display: flex;
-    flex-direction: row;
+.imgProjeto {
+  background-image: url();
+  display: flex;
+  flex-direction: row;
 }
 
 /* Importancia */
 
-.importancia{
-    padding-left: 3vw;
-    padding-right: 10vw;
-    color: rgb(0, 0, 0);
-    height: 75vh;
-    background-color: #F399FF;
-    display: table-cell;
-    vertical-align: middle;
+.importancia {
+  padding-left: 3vw;
+  padding-right: 10vw;
+  color: rgb(0, 0, 0);
+  height: 75vh;
+  background-color: #F399FF;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.container-d{
-    display: flex;
-    justify-content: end;
+.container-d {
+  display: flex;
+  justify-content: end;
+}
+
+.box-img-import {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+.img-import {
+  width: 95%;
 }
 
 /* A equipe */
-.containerEquipe{
-    height: 100vh;
-    padding-top: 5vh;
-    background-color: #4DC2AA;
+.containerEquipe {
+  height: 100vh;
+  padding-top: 5vh;
+  background-color: #4DC2AA;
 }
 
-.equipeTitulo{
-    margin-left: 10vw;
+.equipeTitulo {
+  margin-left: 10vw;
 }
 
-.equipeParagrafo{
-    text-align: center;
-    font-size: 24px;
+.equipeParagrafo {
+  text-align: center;
+  font-size: 24px;
 }
 
 /* Card */
 
-.cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 15%;
-    margin: 1vw;
-    text-align: center;
-    background-color: aliceblue;
-  }
-  
-  .title {
-    color: grey;
-    font-size: 18px;
-  }
-  
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  .box-link{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 15%;
+  margin: 1vw;
+  text-align: center;
+  background-color: aliceblue;
+}
 
-  .card-link{
-    text-decoration: none;
-    font-size: 300%;
-    color: black;
-  }
-  
-  button:hover, a:hover {
-    opacity: 0.7;
-  }
+.title {
+  color: grey;
+  font-size: 18px;
+}
 
-  /* Missão visão e valores  */
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
 
-  .container-mvv{
-    padding: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.box-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
-  .missao{
-    font-size: 24px;
-    margin-right: 2vw;
-    text-align: center;
-    width: 25vw;
-    height: 50vh;
-  }
+.card-link {
+  text-decoration: none;
+  font-size: 300%;
+  color: black;
+}
 
-  .visao{
-    font-size: 24px;
-    text-align: center;
-    width: 25vw;
-    height: 50vh;
-    background-color: #0d84dab1;
-  }
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
 
-  .valores{
-    font-size: 24px;
-    margin-left: 2vw;
-    text-align: center;
-    width: 25vw;
-    height: 50vh;
-  }
+/* Missão visão e valores  */
+
+.container-mvv {
+  padding: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.missao {
+  font-size: 24px;
+  margin-right: 2vw;
+  text-align: center;
+  width: 25vw;
+  height: 50vh;
+}
+
+.visao {
+  font-size: 24px;
+  text-align: center;
+  width: 25vw;
+  height: 50vh;
+  background-color: #0d84dab1;
+}
+
+.valores {
+  font-size: 24px;
+  margin-left: 2vw;
+  text-align: center;
+  width: 25vw;
+  height: 50vh;
+}

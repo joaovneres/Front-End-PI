@@ -19,16 +19,16 @@ function Sobre() {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid xs={4}>
-                        <Box>
-                            <img src="https://i.imgur.com/JRxNxwv.png"  />
-                        </Box>
-                    </Grid>
                 </Grid>
 
                 {/*  A importância */}
 
                 <Grid item xs={12} className='container-d'>
+                    <Grid xs={5}>
+                        <Box className='box-img-import'>
+                            <img src="https://i.imgur.com/JRxNxwv.png" alt="" className='img-import'/>
+                        </Box>
+                    </Grid>
                     <Grid xs={7}>
                         <Box className="importancia" >
                             <Typography variant='h5' className='titulo'>
