@@ -31,9 +31,9 @@ function ListaCategoria() {
                 </Link>
 
             </article>
-            <div className='linha altura-l just-center'>
+            <Box className='linha altura-l just-center margin'>
                 {categorias.map((categoria) => (
-                    <Box m={4} width='250px'>
+                    <Box className='container-card' m={3}>
                         <Card
                             className='cardCategoria'
                             variant="outlined">
@@ -52,14 +52,14 @@ function ListaCategoria() {
                                     </div>
                                     <div className='linhas '>
                                         <p className='atributo'>
-                                        {categoria.tamanhoCategoria}
+                                            {categoria.tamanhoCategoria}
                                         </p>
                                     </div>
                                 </div>
                                 <div className='linha diminuirAltura p-botton'>
                                     <div className='linhas'>
                                         <h3 className='atributo'>
-                                            É alimenticia? 
+                                            É alimenticia?
                                         </h3>
                                     </div>
                                     <div className='linhas'>
@@ -70,10 +70,7 @@ function ListaCategoria() {
                                 </div>
                             </CardContent>
                             <CardActions>
-                                <Box
-                                    display="flex"
-                                    justifyContent="center"
-                                    mb={1}>
+                                <div className='linha'>
                                     <Link
                                         to={`/formularioCategoria/${categoria.idCategoria}`} className="text-decorator-none">
                                         <Box mx={1}>
@@ -98,12 +95,12 @@ function ListaCategoria() {
                                             </Button>
                                         </Box>
                                     </Link>
-                                </Box>
+                                </div>
                             </CardActions>
                         </Card>
                     </Box>
                 ))}
-            </div>
+            </Box>
         </>
     )
 }
