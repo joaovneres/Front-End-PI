@@ -1,5 +1,6 @@
 .textos2{
     font-weight: bold !important;
+    font-family: 'Delmon Delicate', sans-serif !important;
 }
 
 .backGround{
@@ -7,6 +8,10 @@
     min-height: 93vh;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Delmon Delicate', sans-serif !important;
 }
 
 .p-40{
@@ -25,24 +30,21 @@
 
 .botaoCU{
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-/*
-.botaoCadastrar{
-    font-size: 17px !important;
-    color: #ffffff !important;
-    background-color: #E000FF !important;
+    justify-content: space-around;
+    margin-top: 2vh;
 }
 
 .btnCancelar{
-    margin-right: 20px !important;
-    background-color: rgb(183, 255, 244) !important;
-    color: black !important;
-    border: none !important;
-
+    width: 48%;
+    background-color: #8C0345 !important;
 }
-*/
-.botaoCadastrar:hover{
-    background-color: #0DFB77 !important;
+
+.testoB{
+    color: aliceblue !important;
+}
+
+
+.btnCadastrar{
+    width: 48%;
+    background-color: #053B03 !important;
 }

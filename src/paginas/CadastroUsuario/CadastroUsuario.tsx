@@ -123,11 +123,7 @@ function CadastroUsuario() {
     return (
         <Grid
             container
-            direction='row'
-            justifyContent='center'
-            alignItems='center'
             className='backGround'
-
         >
             <Grid
                 item
@@ -151,7 +147,7 @@ function CadastroUsuario() {
                             <TextField
                                 value={usuario.nomeUsuario}
                                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                                id="nome"
+                                id="nomeUsuario"
                                 label="Nome"
                                 variant='outlined'
                                 name='nomeUsuario'
@@ -160,16 +156,25 @@ function CadastroUsuario() {
                             <TextField
                                 value={usuario.emailUsuario}
                                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                                id="usuario"
+                                id="emailUsuario"
                                 label="E-mail"
                                 variant='outlined'
                                 name='emailUsuario'
                                 margin='normal'
                             />
                             <TextField
+                                value={usuario.fotoUsuario}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                                id="fotoUsuario"
+                                label="Foto"
+                                variant='outlined'
+                                name='fotoUsuario'
+                                margin='normal'
+                            />
+                            <TextField
                                 value={usuario.senhaUsuario}
                                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                                id="senha"
+                                id="senhaUsuario"
                                 label="Senha"
                                 variant='outlined'
                                 name='senhaUsuario'
@@ -187,17 +192,17 @@ function CadastroUsuario() {
                                 type='password'
                             />
                         </Box>
-                        <Box marginTop={2} className="botaoCU">
-                            <Link to='/logar' className='text-decorator-none'>
-                                <Button
-                                    className='btnCancelar'
-                                    variant='contained'
-                                    color='secondary'>
-                                    voltar
-                                </Button>
-                            </Link>
+                        <Box className="botaoCU">
+
                             <Button
-                                className='botaoCadastrar'
+                                className='btnCancelar'
+                                variant='contained'>
+                                <Link to='/logar' className='text-decorator-none testoB'>
+                                    voltar
+                                </Link>
+                            </Button>
+                            <Button
+                                className='btnCadastrar testoB'
                                 variant='contained'
                                 type='submit'>
                                 Cadastrar
@@ -205,7 +210,7 @@ function CadastroUsuario() {
                         </Box>
                     </form>
                 </Box>
-            </Grid>
+            </Grid >
             <Grid
                 item
                 xs={4}
