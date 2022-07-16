@@ -3,23 +3,24 @@
 }
 
 .backGround{
-    background-image: url(https://i.imgur.com/fAZwARf.png);
-    background-color: #ffffff;
-    width: 100vw;
-    height: 100vh;
+    background-image: url(https://s2.glbimg.com/zO0uI5mfMeZDAmCzFxbhoJnHZ18=/smart/e.glbimg.com/og/ed/f/original/2022/02/10/plantas-ornamentais-sala12.jpg);
+    min-height: 93vh;
     background-size: cover;
-    background-position: right; 
     background-repeat: no-repeat;
 }
 
 .p-40{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 7vh;
 }
 
 .formulario2{
-    background-color: #65db418c;
+    background-color: #ffffffc5;
     border-radius: 3%;
+}
+
+.containerForms{
+    display: flex;
+    flex-direction: column;
 }
 
 .botaoCU{
