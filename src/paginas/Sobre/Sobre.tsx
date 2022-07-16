@@ -15,8 +15,9 @@ function Sobre() {
                                 O Projeto
                             </Typography>
                             <Typography className='descricao'>
-                                A BotanicHouse® é uma plataforma e-commerce criada com o objetivo de conectar consumidores do eixo urbano das grandes cidades com os produtores rurais de plantas ornamentais, silvestres e alimentícias. <Link to='/categoria' >(verificar categorias)</Link>
+                                A BotanicHouse® é uma plataforma e-commerce criada com o objetivo de conectar consumidores do eixo urbano das grandes cidades com os produtores rurais de plantas ornamentais, silvestres e alimentícias.
                             </Typography>
+                            <br />
                             <Typography className='descricao'>
                             Aqui você poderá navegar entre nossas categorias e escolher as espécies de plantas que mais lhe agrada e se adaptam ao seu ambiente. Com uma breve descrição, você facilmente saberá se sua escolha é adequada ao seu tipo de ambiente e receber sua muda direto em sua residência, contribuindo para um mundo mais verde e sustentável.
                             </Typography>
@@ -46,7 +47,7 @@ function Sobre() {
 
                 <Grid item xs={12} className='containerEquipe'>
                     <Box>
-                        <h1 className='equipeTitulo'>A equipe</h1>
+                        <h1 className='equipeTitulo fontFamily'>A equipe</h1>
                         <p className='equipeParagrafo'> Somos um time de desenvolvedores motivados a fazer a diferença</p>
                         <Box className='cards'>
                             <div className="card">
