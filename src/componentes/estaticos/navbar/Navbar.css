@@ -14,7 +14,7 @@
 }
 
 .card-nav{
-    background-color: #34b99f;
+    background-color: #033a20;
     justify-content: space-between;
 }
 
@@ -65,7 +65,7 @@
     font-family: 'Heebo', sans-serif;
     /* display: inline-block; */
     border-radius: 4px;
-    background-color: #34b99f !important;
+    background-color: #033a20 !important;
     border: none;
     color: #FFFFFF;
     text-align: center;
