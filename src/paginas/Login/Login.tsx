@@ -11,7 +11,7 @@ import { toast, Slide } from 'react-toastify'
 
 function Login() {
 
-  function alertaSocialMedia(){
+  function alertaSocialMedia() {
 
     toast.info('O Neres é chato!', {
       position: "top-center",
@@ -23,9 +23,9 @@ function Login() {
       progress: undefined,
       theme: 'colored',
       transition: Slide,
-  });
-  
-}
+    });
+
+  }
 
   let navigate = useNavigate();
 
@@ -187,11 +187,11 @@ function Login() {
             <Box className='boxSocialMedia' onClick={alertaSocialMedia}>
               <i><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png"
                 width='40px' /></i>
-                </Box>
+            </Box>
             <Box className='boxSocialMedia' onClick={alertaSocialMedia}>
               <i><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
                 width='40px' /></i>
-                </Box>
+            </Box>
           </Grid>
 
           <Box
