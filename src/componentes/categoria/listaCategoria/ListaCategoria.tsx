@@ -33,7 +33,7 @@ function ListaCategoria() {
             </article>
             <div className='linha altura-l just-center'>
                 {categorias.map((categoria) => (
-                    <Box m={4} width='250px'>
+                    <Box m={4} width='300px'>
                         <Card
                             variant="outlined">
                             <CardContent>
