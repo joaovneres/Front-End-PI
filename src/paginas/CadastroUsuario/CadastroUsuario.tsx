@@ -123,20 +123,15 @@ function CadastroUsuario() {
     return (
         <Grid
             container
-            direction='row'
-            justifyContent='center'
-            alignItems='center'
             className='backGround'
-
         >
             <Grid
                 item
-                xs={6}
+                xs={4}
                 alignItems='center'
                 className='formulario2'
-                >
-                <Box
-                    paddingX={10}>
+            >
+                <Box>
                     <form className='p-40' onSubmit={onSubmit}>
                         <Typography
                             variant='h3'
@@ -148,59 +143,66 @@ function CadastroUsuario() {
                         >
                             Cadastrar
                         </Typography>
-                        <TextField
-                            value={usuario.nomeUsuario}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id="nome"
-                            label="nome"
-                            variant='outlined'
-                            name='nomeUsuario'
-                            margin='normal'
-                            fullWidth
-                        />
-                        <TextField
-                            value={usuario.emailUsuario}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id="usuario"
-                            label="e-mail"
-                            variant='outlined'
-                            name='emailUsuario'
-                            margin='normal'
-                            fullWidth
-                        />
-                        <TextField
-                            value={usuario.senhaUsuario}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id="senha"
-                            label="senha"
-                            variant='outlined'
-                            name='senhaUsuario'
-                            margin='normal'
-                            fullWidth
-                            type='password'
-                        />
-                        <TextField
-                            value={confirmarSenha}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
-                            id="confirmarSenha"
-                            label="confirmar senha"
-                            variant='outlined'
-                            name='confirmarSenha'
-                            margin='normal'
-                            type='password'
-                            fullWidth
-                        />
-                        <Box marginTop={2} textAlign='center'>
-                            <Link to='/logar' className='text-decorator-none'>
-                                <Button
-                                    className='btnCancelar'
-                                    variant='contained'
-                                    color='secondary'>
-                                    voltar
-                                </Button>
-                            </Link>
+                        <Box className='containerForms'>
+                            <TextField
+                                value={usuario.nomeUsuario}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                                id="nomeUsuario"
+                                label="Nome"
+                                variant='outlined'
+                                name='nomeUsuario'
+                                margin='normal'
+                            />
+                            <TextField
+                                value={usuario.emailUsuario}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                                id="emailUsuario"
+                                label="E-mail"
+                                variant='outlined'
+                                name='emailUsuario'
+                                margin='normal'
+                            />
+                            <TextField
+                                value={usuario.fotoUsuario}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                                id="fotoUsuario"
+                                label="Foto"
+                                variant='outlined'
+                                name='fotoUsuario'
+                                margin='normal'
+                            />
+                            <TextField
+                                value={usuario.senhaUsuario}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                                id="senhaUsuario"
+                                label="Senha"
+                                variant='outlined'
+                                name='senhaUsuario'
+                                margin='normal'
+                                type='password'
+                            />
+                            <TextField
+                                value={confirmarSenha}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
+                                id="confirmarSenha"
+                                label="Confirmar senha"
+                                variant='outlined'
+                                name='confirmarSenha'
+                                margin='normal'
+                                type='password'
+                            />
+                        </Box>
+                        <Box className="botaoCU">
+
                             <Button
-                                className='botaoCadastrar'
+                                className='btnCancelar'
+                                variant='contained'>
+                                <Link to='/logar' className='text-decorator-none testoB'>
+                                    voltar
+                                </Link>
+                            </Button>
+                            <Button
+                                className='btnCadastrar testoB'
                                 variant='contained'
                                 type='submit'>
                                 Cadastrar
@@ -208,7 +210,7 @@ function CadastroUsuario() {
                         </Box>
                     </form>
                 </Box>
-            </Grid>
+            </Grid >
             <Grid
                 item
                 xs={4}

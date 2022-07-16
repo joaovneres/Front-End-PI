@@ -70,7 +70,7 @@ function CadastroCategoria() {
 
     if (idCategoria !== undefined) {
       try {
-        await put(`/categoria`, categoria, setCategoria, {
+        await put(`/categoria/atualizar`, categoria, setCategoria, {
           headers: {
             Authorization: token,
           },
@@ -106,7 +106,7 @@ function CadastroCategoria() {
       }
     } else {
       try {
-        await post(`categoria`, categoria, setCategoria, {
+        await post(`categoria/cadastrar`, categoria, setCategoria, {
           headers: {
             Authorization: token,
           },

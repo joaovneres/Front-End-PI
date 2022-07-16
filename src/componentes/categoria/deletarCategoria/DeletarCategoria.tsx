@@ -50,7 +50,7 @@ function DeletarCategoria() {
 
     async function sim() {
         try {
-            await deleteId(`/categoria/${idCategoria}`, {
+            await deleteId(`/categoria/deletar/${idCategoria}`, {
                 headers: {
                     Authorization: token,
                 }

@@ -1,41 +1,50 @@
 .textos2{
     font-weight: bold !important;
-}
-
-.btnCancelar{
-    margin-right: 20px !important;
-    background-color: rgb(183, 255, 244) !important;
-    color: black !important;
-    border: none !important;
-
+    font-family: 'Delmon Delicate', sans-serif !important;
 }
 
 .backGround{
-    background-image: url(https://i.imgur.com/fAZwARf.png);
-    background-color: #289781;
-    width: 100vw;
-    height: 100vh;
+    background-image: url(https://s2.glbimg.com/zO0uI5mfMeZDAmCzFxbhoJnHZ18=/smart/e.glbimg.com/og/ed/f/original/2022/02/10/plantas-ornamentais-sala12.jpg);
+    min-height: 93vh;
     background-size: cover;
-    background-position: right; 
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Delmon Delicate', sans-serif !important;
 }
 
 .p-40{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 7vh;
 }
 
 .formulario2{
     background-color: #ffffffc5;
-    border-radius: 50px;
+    border-radius: 3%;
 }
 
-.botaoCadastrar{
-    font-size: 17px !important;
-    color: #ffffff !important;
-    background-color: #E000FF !important;
+.containerForms{
+    display: flex;
+    flex-direction: column;
 }
 
-.botaoCadastrar:hover{
-    background-color: #0DFB77 !important;
+.botaoCU{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2vh;
+}
+
+.btnCancelar{
+    width: 48%;
+    background-color: #8C0345 !important;
+}
+
+.testoB{
+    color: aliceblue !important;
+}
+
+
+.btnCadastrar{
+    width: 48%;
+    background-color: #053B03 !important;
 }

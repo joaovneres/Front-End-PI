@@ -1,9 +1,10 @@
-import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, Grid, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
+import './listaProdutos.css'
 
 function ListarProduto() {
 
@@ -19,50 +20,46 @@ function ListarProduto() {
 
   return (
     <>
-      {
-        produtos.map(produto => (
-          <Box m={2} >
-            <Card variant="outlined">
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Produtos
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  {produto.nomeProduto}
-                </Typography>
-                <img src={produto.imgProduto} alt="Produto"/>
-                <Typography variant="body2" component="p">
-                  {produto.valorProduto}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.categoria?.tipoCategoria}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  Anunciado por: {produto.usuario?.nomeUsuario}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
-                  <Link to={`/formularioProduto/${produto.idProduto}`} className="text-decorator-none" >
-                    <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                        Atualizar
-                      </Button>
-                    </Box>
-                  </Link>
-                  <Link to={`/deletarProduto/${produto.idProduto}`} className="text-decorator-none">
-                    <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
-                        Deletar
-                      </Button>
-                    </Box>
-                  </Link>
+      <Grid container xs={12} className="container-produtos">
+        <Grid container spacing={2} xs={10} className="lista-produtos">
+          {
+            produtos.map(produto => (
+              <Grid item xs={3}>
+                <Box >
+                  <Card variant="outlined">
+                      <Box className='img-list-prod'>
+                      <img src={produto.imgProduto} alt="Produto"/>
+                      </Box>
+                    <CardContent>
+                      <Typography component="h2" className='nomeProduto'>
+                        {produto.nomeProduto}
+                      </Typography>
+                      <Typography component="p">
+                        R$ {produto.valorProduto}
+                      </Typography>
+                      <Typography component="p">
+                        {produto.categoria?.tipoCategoria}
+                      </Typography>
+                      <Typography component="p">
+                        Local: {produto.enderecoProduto}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Link to={`/deletarProduto/${produto.idProduto}`} className="text-decorator-none">
+                          <Box mx={1}>
+                            <Button variant="contained" size='small' color="secondary">
+                              Comprar
+                            </Button>
+                          </Box>
+                        </Link>
+                    </CardActions>
+                  </Card>
                 </Box>
-              </CardActions>
-            </Card>
-          </Box>
-        ))
-      }
+              </Grid>
+            ))
+          }
+        </Grid>
+      </Grid>
     </>
   )
 }
