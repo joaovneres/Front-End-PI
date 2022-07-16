@@ -19,7 +19,7 @@ function ListaCategoria() {
         getCategoria();
     }, [categorias.length]);
 
-    
+
 
     return (
         <>
@@ -33,45 +33,39 @@ function ListaCategoria() {
             </article>
             <div className='linha altura-l just-center'>
                 {categorias.map((categoria) => (
-                    <Box m={4} width='300px'>
+                    <Box m={4} width='250px'>
                         <Card
+                            className='cardCategoria'
                             variant="outlined">
                             <CardContent>
                                 <Typography
+                                    className='nomeCategoria'
                                     variant="h5"
                                     component="h2">
                                     {categoria.tipoCategoria}
                                 </Typography>
-                                <div className='linha'>
-                                    <div className='linhas'>
-                                        <Typography
-                                            variant="h5"
-                                            component="h2">
+                                <div className='linha diminuirAltura'>
+                                    <div className='linhas '>
+                                        <h3 className='atributo'>
                                             Tamanho:
-                                        </Typography>
+                                        </h3>
                                     </div>
-                                    <div className='linhas'>
-                                        <Typography
-                                            variant="h5"
-                                            component="h2">
-                                            {categoria.tamanhoCategoria}
-                                        </Typography>
+                                    <div className='linhas '>
+                                        <p className='atributo'>
+                                        {categoria.tamanhoCategoria}
+                                        </p>
                                     </div>
                                 </div>
-                                <div className='linha'>
+                                <div className='linha diminuirAltura p-botton'>
                                     <div className='linhas'>
-                                        <Typography
-                                            variant="h5"
-                                            component="h2">
-                                            Alimenticia:
-                                        </Typography>
+                                        <h3 className='atributo'>
+                                            É alimenticia? 
+                                        </h3>
                                     </div>
                                     <div className='linhas'>
-                                        <Typography
-                                            variant="h5"
-                                            component="h2">
-                                            {categoria.alimenticiaCategoria?"Sim":"Não"}
-                                        </Typography>
+                                        <p className='atributo'>
+                                            {categoria.alimenticiaCategoria ? "Sim" : "Não"}
+                                        </p>
                                     </div>
                                 </div>
                             </CardContent>

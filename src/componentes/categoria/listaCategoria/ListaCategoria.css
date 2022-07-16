@@ -22,6 +22,18 @@
     background-color: #228b22 !important;
 }
 
+.nomeCategoria{
+    color: white !important;
+    font-size: 28px !important;
+    text-align: center;
+}
+
+.cardCategoria{
+    border-radius: 25px !important;
+    border: 2px solid black !important;
+    background-color: #048b4ae4 !important;
+}
+
 /* Alinhando linhas */
 .linha{
     display: flex;
@@ -48,7 +60,7 @@
     font-size: 18px;
     padding: 10px;
     border-radius: 40px;
-    background-color: cornflowerblue;
+    background-color: #053B03;
     color: aliceblue;
 }
 
@@ -64,4 +76,24 @@
 
 .just-center{
     justify-content: center;
+}
+
+/* Atributos */
+
+.atributo{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.atributoPergunta{
+    color: white;
+}
+
+.diminuirAltura{
+    height: 30px;
+}
+
+.p-botton{
+    padding-bottom: 20px;
 }
