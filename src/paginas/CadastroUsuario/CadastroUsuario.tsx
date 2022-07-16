@@ -139,11 +139,11 @@ function CadastroUsuario() {
                             color='textPrimary'
                             align='center'
                             component='h3'
-                            className='textos2'
+                            className='textos2 fontFamily'
                         >
                             Cadastrar
                         </Typography>
-                        <Box className='containerForms'>
+                        <Box className='containerForms fontFamily'>
                             <TextField
                                 value={usuario.nomeUsuario}
                                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
@@ -193,14 +193,13 @@ function CadastroUsuario() {
                             />
                         </Box>
                         <Box className="botaoCU">
-
-                            <Button
-                                className='btnCancelar'
-                                variant='contained'>
-                                <Link to='/logar' className='text-decorator-none testoB'>
-                                    voltar
-                                </Link>
-                            </Button>
+                            <Link to='/logar' className='text-decorator-none linkVoltar'>
+                                <Button
+                                    className='btnCancelar testoB'
+                                    variant='contained'>
+                                    Voltar
+                                </Button>
+                            </Link>
                             <Button
                                 className='btnCadastrar testoB'
                                 variant='contained'

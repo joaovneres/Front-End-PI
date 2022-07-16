@@ -132,14 +132,14 @@ function Login() {
               color="textPrimary"
               component="h3"
               align="center"
-              className="textos1 branco">
+              className="textos1 fontFamily">
               Entrar
             </Typography>
             <TextField
               value={usuarioLogin.usuarioLogin}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="usuario"
-              label="usuário"
+              id="usuarioLogin"
+              label="E-mail"
               color='primary'
               variant="outlined"
               name="usuarioLogin"
@@ -150,22 +150,27 @@ function Login() {
             <TextField
               value={usuarioLogin.senhaLogin}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="senha"
-              label="senha"
+              id="senhaLogin"
+              label="Senha"
               variant="outlined"
               name="senhaLogin"
               margin="normal"
               type="password"
               fullWidth
             />
-            <Box
-              marginTop={2}
-              textAlign="center">
+            <Box className="botaoCU">
+              <Link to='/home' className='text-decorator-none linkVoltar'>
+                <Button
+                  className='btnCancelar testoB'
+                  variant='contained'>
+                  Voltar
+                </Button>
+              </Link>
               <Button
-                type="submit"
-                variant="contained"
-                className='botaoLogar'>
-                Logar
+                className='btnCadastrar testoB'
+                variant='contained'
+                type='submit'>
+                Entrar
               </Button>
             </Box>
           </form>

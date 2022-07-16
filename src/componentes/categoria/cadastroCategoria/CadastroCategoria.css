@@ -4,20 +4,33 @@
 }
 
 .teste-c {
-  height: 100vh;
+  min-height: 86.6vh;
+  background-image: url(https://i.imgur.com/cMW2q7v.jpg);
+  background-color: #EDEDEA;
+  background-size: 150vh;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#form-c{
-  background-color: #289781a9;
-  padding: 30px;
-  border-radius: 40px ;
+.bordaCadastro{
+  padding-top: 18.2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 #form-c {
-  background-color: #289781a9;
+  background-color: #ededeacc;
+  width: 18.3%;
   padding: 30px;
   border-radius: 40px ;
 }
 
 .titulo-c{
   color: #1d1c1c !important;
+}
+
+.finalizar{
+  background-color: #2A4737 !important;
+  color: #EDEDEA !important;
 }

@@ -151,7 +151,7 @@ function CadastroCategoria() {
   return (
     <>
       <Grid xs={12} className='teste-c'>
-        <Box paddingX={60} paddingY={13}>
+        <Box className="bordaCadastro">
           <div id='form-c'>
             <form onSubmit={onSubmit}>
               <Typography
@@ -159,11 +159,11 @@ function CadastroCategoria() {
                 color="textSecondary"
                 component="h1"
                 align="center"
-                className='titulo-c'>
-                Cadastre uma nova categoria
+                className='titulo-c fontFamily'>
+                Nova categoria
               </Typography>
               <TextField
-                id="descricao"
+                id="tipoCategoria"
                 label="Descrição"
                 variant="outlined"
                 name="tipoCategoria"
@@ -173,7 +173,7 @@ function CadastroCategoria() {
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
               />
               <TextField
-                id="descricao"
+                id="tamanhoCategoria"
                 label="Qual o tamanho? "
                 variant="outlined"
                 name="tamanhoCategoria"
@@ -183,8 +183,8 @@ function CadastroCategoria() {
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
               />
               <TextField
-                id="descricao"
-                label="é alimenticia?"
+                id="alimenticiaCategoria"
+                label="É alimenticia?"
                 variant="outlined"
                 name="alimenticiaCategoria"
                 margin="normal"
@@ -192,12 +192,11 @@ function CadastroCategoria() {
                 value={categoria.alimenticiaCategoria}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
               />
-
               <Button
                 className='finalizar'
                 type="submit"
                 variant="contained" >
-                Finalizar
+                Cadastrar
               </Button>
             </form>
           </div>
