@@ -5,23 +5,22 @@
 /* Botões Atualizar e deletar */
 
 .deletar-c{
-    color: white;
-    background-color: #ef1010;
+    background-color: #dd1515 !important;
 }
 .deletar-c:hover{
-    color: white;
-    background-color: #f70808 !important;
+    background-color: #ff0000 !important;
 }
 
 .atualizar-c{
-    margin-left: 10px !important;
     color: white !important;
-    background-color: #228b22 !important;
+    background-color: #00b30f !important;
 }
 .atualizar-c:hover{
     color: white;
-    background-color: #228b22 !important;
+    background-color: #053B03 !important;
 }
+
+/* ---- ---- ----*/
 
 .nomeCategoria{
     color: #ffffff !important;
@@ -31,9 +30,8 @@
 
 
 .cardCategoria{
-    box-shadow: 6px 6px #000000;
-    border-radius: 25px !important;
-    background-color: #048b4ae4 !important;
+    box-shadow: 10px 10px #000000;
+    background:linear-gradient(180deg, green, #053B03);
 }
 
 .container-card{
