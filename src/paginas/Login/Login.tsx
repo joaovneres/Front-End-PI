@@ -13,7 +13,7 @@ function Login() {
 
   function alertaSocialMedia() {
 
-    toast.info('O Neres é chato!', {
+    toast.info('Função não implementada', {
       position: "top-center",
       autoClose: 2000,
       hideProgressBar: true,
