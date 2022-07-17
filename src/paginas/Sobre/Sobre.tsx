@@ -6,9 +6,12 @@ import './Sobre.css'
 function Sobre() {
     return (
         <>
+        
             <Grid container className="caixa">
                 {/* O projeto */}
                 <Grid item xs={12} className='imgProjeto'>
+                <div className='folhagens'> 
+                <img src="https://i.imgur.com/K5ZI6HE.png" width='100%'></img></div>   
                     <Grid xs={7}>
                         <Box className="projeto">
                             <Typography variant='h5' className='titulo'>
@@ -100,11 +103,18 @@ function Sobre() {
                 {/*  Missão Visão e Valores */}
 
                 <Grid item xs={12} className='container-mvv'>
-                    <Grid className='missao'>Missão</Grid>
-                    <Grid className='visao'>Visão</Grid>
-                    <Grid className='valores'>Valores</Grid>
+                    <Grid className='missao'>Missão
+                    <p>Facilitar, otimizar e modernizar o contato entre os vendedores e compradores de plantas indoor.</p>
+                    </Grid>
+                    <Grid className='visao'>Visão
+                    <p>Colaborar com a meta estabelecida pela ONU na ODS 11.a através da implementação ampla do marketplace.</p>
+                    </Grid>
+                    <Grid className='valores'>Valores
+                    <p>Ética, cidadania, meio-ambiente, responsabilidade e comprometimento.</p>
+                    </Grid>
                 </Grid>
             </Grid>
+                
         </>
     )
 }
