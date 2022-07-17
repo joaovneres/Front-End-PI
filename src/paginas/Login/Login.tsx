@@ -13,7 +13,7 @@ function Login() {
 
   function alertaSocialMedia() {
 
-    toast.info('O Neres é chato!', {
+    toast.info('Função não implementada', {
       position: "top-center",
       autoClose: 2000,
       hideProgressBar: true,
@@ -122,7 +122,7 @@ function Login() {
         xs={4}
         className='formulario'>
         <Box
-          paddingX={10}
+          paddingX={8}
           paddingY={7}>
           <form
             onSubmit={logar}>
@@ -202,7 +202,7 @@ function Login() {
           <Box
             display="flex"
             justifyContent="center"
-            marginTop={2}>
+            marginTop={1}>
             <Box marginRight={1}>
               <Typography
                 variant="subtitle1"
@@ -224,6 +224,18 @@ function Login() {
             </Link>
           </Box>
         </Box>
+        <Box>
+            <Link
+              to="/home">
+              <Typography
+                variant="subtitle1"
+                gutterBottom
+                align="center"
+                className="textos1">
+                Voltar a home
+              </Typography>
+            </Link>
+          </Box>
       </Grid>
     </Grid>
   )
