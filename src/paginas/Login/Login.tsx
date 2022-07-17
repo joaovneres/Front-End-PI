@@ -122,7 +122,7 @@ function Login() {
         xs={4}
         className='formulario'>
         <Box
-          paddingX={10}
+          paddingX={8}
           paddingY={7}>
           <form
             onSubmit={logar}>
@@ -197,7 +197,7 @@ function Login() {
           <Box
             display="flex"
             justifyContent="center"
-            marginTop={2}>
+            marginTop={1}>
             <Box marginRight={1}>
               <Typography
                 variant="subtitle1"
@@ -219,8 +219,7 @@ function Login() {
             </Link>
           </Box>
         </Box>
-        <Box
-            marginTop={1}>
+        <Box>
             <Link
               to="/home">
               <Typography
