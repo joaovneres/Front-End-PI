@@ -138,6 +138,8 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 30vh;
+
 }
 
 .missao {
@@ -145,15 +147,17 @@ a:hover {
   margin-right: 2vw;
   text-align: center;
   width: 25vw;
-  height: 50vh;
+  height: 30vh;
+  margin-bottom:'10px';
 }
 
 .visao {
   font-size: 24px;
   text-align: center;
   width: 25vw;
-  height: 50vh;
-  background-color: #ec84b5;
+  height: 30vh;
+  background-color: #F399FF;
+  padding :'10px';
 }
 
 .valores {
@@ -161,5 +165,16 @@ a:hover {
   margin-left: 2vw;
   text-align: center;
   width: 25vw;
-  height: 50vh;
+  height: 30vh;
+  margin-bottom:'10px';
+}
+
+.folhagens{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+.fotoOProjeto{
+  objectFit: 'cover';
 }
