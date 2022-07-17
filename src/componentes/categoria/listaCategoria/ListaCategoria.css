@@ -5,21 +5,37 @@
 /* Botões Atualizar e deletar */
 
 .deletar-c{
-    color: white;
-    background-color: #ef1010;
+    background-color: #dd1515 !important;
 }
 .deletar-c:hover{
-    color: white;
-    background-color: #f70808 !important;
+    background-color: #ff0000 !important;
 }
 
 .atualizar-c{
     color: white !important;
-    background-color: #228b22 !important;
+    background-color: #00b30f !important;
 }
 .atualizar-c:hover{
     color: white;
-    background-color: #228b22 !important;
+    background-color: #053B03 !important;
+}
+
+/* ---- ---- ----*/
+
+.nomeCategoria{
+    color: #ffffff !important;
+    font-size: 28px !important;
+    text-align: center;
+}
+
+
+.cardCategoria{
+    box-shadow: 10px 10px #000000;
+    background:linear-gradient(180deg, green, #053B03);
+}
+
+.container-card{
+    height: 250px;
 }
 
 /* Alinhando linhas */
@@ -48,14 +64,14 @@
     font-size: 18px;
     padding: 10px;
     border-radius: 40px;
-    background-color: cornflowerblue;
+    background-color: #053B03;
     color: aliceblue;
 }
 
 /* Altura da Linha */
 
 .altura-l{
-    min-height: 100vh;
+    min-height: 76.4vh;
 }
 
 .nova-c{
@@ -65,3 +81,32 @@
 .just-center{
     justify-content: center;
 }
+
+/* Atributos */
+
+.atributo{
+    color: rgba(255, 255, 255, 0.942);
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.atributoPergunta{
+    color: rgba(255, 255, 255, 0.876);
+}
+
+.diminuirAltura{
+    height: 30px;
+}
+
+.p-botton{
+    padding-bottom: 20px;
+}
+
+/* MArgin */
+
+.margin{
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+
+

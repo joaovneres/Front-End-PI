@@ -1,5 +1,8 @@
 .textos2{
     font-weight: bold !important;
+}
+
+.fontFamily{
     font-family: 'Delmon Delicate', sans-serif !important;
 }
 
@@ -11,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Delmon Delicate', sans-serif !important;
 }
 
 .p-40{
@@ -34,17 +36,22 @@
     margin-top: 2vh;
 }
 
+.linkVoltar{
+ width: 98%;
+}
+
 .btnCancelar{
-    width: 48%;
+    width: 98% !important;
     background-color: #8C0345 !important;
 }
 
 .testoB{
-    color: aliceblue !important;
+    color: #ffffff !important;
+    width: 100% ;
 }
 
 
 .btnCadastrar{
-    width: 48%;
+    width: 98%;
     background-color: #053B03 !important;
 }

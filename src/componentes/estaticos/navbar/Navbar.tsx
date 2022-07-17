@@ -59,7 +59,7 @@ function Navbar() {
                         </Link>
                         <Link to='/produto' >
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Produto </span></button>
+                            <button className="buttonf-black"><span> Produtos </span></button>
                             </Box>
                         </Link>
                         <Link to='/categoria' >
@@ -105,7 +105,7 @@ function Navbar() {
                         </Link>
                         <Link to='/produto' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Produto </span></button>
+                            <button className="buttonf"><span> Produtos </span></button>
                             </Box>
                         </Link>
                         <Link to='/categoria' >
@@ -150,7 +150,7 @@ function Navbar() {
                         </Link>
                         <Link to='/produto' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Produto </span></button>
+                            <button className="buttonf"><span> Produtos </span></button>
                             </Box>
                         </Link>
                         <Link to='/categoria' >
@@ -192,7 +192,7 @@ function Navbar() {
                         </Link>
                         <Link to='/produto' >
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Produto </span></button>
+                            <button className="buttonf-black"><span> Produtos </span></button>
                             </Box>
                         </Link>
                         <Link to='/categoria' >
