@@ -7,6 +7,7 @@ import { Slide, toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
 import { buscaId, deleteId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import './DeletarCategoria.css'
 
 function DeletarCategoria() {
     let navigate = useNavigate();
@@ -92,51 +93,51 @@ function DeletarCategoria() {
 
     return (
         <>
-            <Box m={2}>
-                <Card variant='outlined'>
-                    <CardContent>
-                        <Box justifyContent='center'>
-                            <Typography
-                                color='textSecondary'
-                                gutterBottom>
-                                Deseja deletar a Categoria? :
-                            </Typography>
-                            <Typography
-                                color='textSecondary'>
-                                {categoria?.tipoCategoria}
-                            </Typography>
-                        </Box>
-                    </CardContent>
+            <div className='corpo'>
+                <div className='membro'>
+                    <div className='cardDelete'>
+                        <CardContent>
+                            <Box justifyContent='center'>
+                                <h2 className='h2'>
+                                    {categoria?.tipoCategoria} será apagado(a)
+                                </h2>
+                                <h1 className='h1'>
+                                    Você tem certeza ?
+                                </h1>
+                            </Box>
+                        </CardContent>
 
-                    <CardActions>
-                        <Box
-                            display='flex'
-                            justifyContent='start'
-                            ml={1}
-                            mb={2}>
-                            <Box mx={2}>
-                                <Button
-                                    onClick={sim}
-                                    variant='contained'
-                                    size='large'
-                                    color='primary'
-                                    className='marginLeft'>
-                                    Sim
-                                </Button>
+                        <div className='botoes'>
+                            <Box
+                                display='flex'
+                                justifyContent='start'
+                                ml={1}
+                                mb={2}>
+                                <Box mx={2}>
+                                    <Button
+                                        onClick={sim}
+                                        variant='contained'
+                                        size='large'
+                                        color='primary'
+                                        className='marginLeft sim'>
+                                        Sim
+                                    </Button>
+                                </Box>
+                                <Box mx={2}>
+                                    <Button
+                                        onClick={nao}
+                                        variant='contained'
+                                        size='large'
+                                        className='nao'>
+                                        Não
+                                    </Button>
+                                </Box>
                             </Box>
-                            <Box mx={2}>
-                                <Button
-                                    onClick={nao}
-                                    variant='contained'
-                                    size='large'
-                                    color='secondary'>
-                                    Não
-                                </Button>
-                            </Box>
-                        </Box>
-                    </CardActions>
-                </Card>
-            </Box>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </>
     )
 }

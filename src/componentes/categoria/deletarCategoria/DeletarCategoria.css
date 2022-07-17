@@ -1,0 +1,44 @@
+.sim{
+    background-color: rgb(3, 110, 3) !important;
+}
+.nao{
+    color: white !important;
+    background-color: rgb(222, 6, 6) !important;
+}
+
+.h1{
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+.botoes{
+    display: flex;
+    justify-content: center;
+}
+
+.cardDelete{
+    margin: 2px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(180deg, green, #053B03);
+    box-shadow: 10px 10px;
+}
+
+.corpo{
+    height: 100vh;
+}
+
+.membro{
+    padding-top: 20vh;
+    display: flex;
+    justify-content: center;
+}
