@@ -4,13 +4,29 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Categoria from '../../../models/Categoria';
 import { buscaId, post, put } from '../../../services/Service';
-import { Button, Container, Grid, TextField, Typography } from '@material-ui/core';
+import { Button, Checkbox, CheckboxProps, FormControlLabel, Grid, TextField, Typography, withStyles } from '@material-ui/core';
 import './CadastroCategoria.css';
 import { Slide, toast } from 'react-toastify';
 import { Box } from '@mui/material';
+import { green } from '@material-ui/core/colors';
 
 
 function CadastroCategoria() {
+
+  //CheckBox verde
+  const GreenCheckbox = withStyles({
+    root: {
+      color: green[400],
+      '&$checked': {
+        color: green[600],
+      },
+    },
+    checked: {},
+  })((props: CheckboxProps) => <Checkbox color="default" {...props} />);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCategoria({ ...categoria, [event.target.name]: event.target.checked });
+  };
 
   //Navegar entre as telas
   let navigate = useNavigate()
@@ -182,22 +198,23 @@ function CadastroCategoria() {
                 value={categoria.tamanhoCategoria}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
               />
-              <TextField
-                id="alimenticiaCategoria"
-                label="É alimenticia?"
-                variant="outlined"
-                name="alimenticiaCategoria"
-                margin="normal"
-                fullWidth
-                value={categoria.alimenticiaCategoria}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
+              <FormControlLabel
+                control={
+                  <GreenCheckbox
+                    checked={categoria.alimenticiaCategoria}
+                    onChange={handleChange}
+                    name="alimenticiaCategoria" />
+                }
+                label="Alimentícia"
               />
-              <Button
-                className='finalizar'
-                type="submit"
-                variant="contained" >
-                Cadastrar
-              </Button>
+              <Box className='alinharCentro'>
+                <Button
+                  className='finalizar'
+                  type="submit"
+                  variant="contained" >
+                  Cadastrar
+                </Button>
+              </Box>
             </form>
           </div>
         </Box>
@@ -206,4 +223,4 @@ function CadastroCategoria() {
   )
 }
 
-export default CadastroCategoria
+export default CadastroCategoria;

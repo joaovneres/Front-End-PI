@@ -23,84 +23,86 @@ function ListaCategoria() {
 
     return (
         <>
-            <article className='linha-t'>
-                <h1 className='categoria-t'>Categorias</h1>
+            <div className='backgroundCategoria'>
+                <article className='linha-t'>
+                    <h1 className='categoria-t fontFamily'>Categorias</h1>
 
-                <Link to='/formularioCategoria' className='nova-c'>
-                    <p className='p'>Nova categoria</p>
-                </Link>
+                    <Link to='/formularioCategoria' className='nova-c'>
+                        <p className='p fontFamily'>Nova categoria</p>
+                    </Link>
 
-            </article>
-            <Box className='linha altura-l just-center margin'>
-                {categorias.map((categoria) => (
-                    <Box className='container-card' m={3}>
-                        <Card
-                            className='cardCategoria'
-                            variant="outlined">
-                            <CardContent>
-                                <Typography
-                                    className='nomeCategoria'
-                                    variant="h5"
-                                    component="h2">
-                                    {categoria.tipoCategoria}
-                                </Typography>
-                                <div className='linha diminuirAltura'>
-                                    <div className='linhas '>
-                                        <h3 className='atributo'>
-                                            Tamanho:
-                                        </h3>
+                </article>
+                <Box className='linha altura-l just-center margin'>
+                    {categorias.map((categoria) => (
+                        <Box className='container-card' m={3}>
+                            <Card
+                                className='cardCategoria'
+                                variant="outlined">
+                                <CardContent>
+                                    <Typography
+                                        className='nomeCategoria'
+                                        variant="h5"
+                                        component="h2">
+                                        {categoria.tipoCategoria}
+                                    </Typography>
+                                    <div className='linha diminuirAltura'>
+                                        <div className='linhas '>
+                                            <h3 className='atributo'>
+                                                Tamanho:
+                                            </h3>
+                                        </div>
+                                        <div className='linhas '>
+                                            <p className='atributo'>
+                                                {categoria.tamanhoCategoria}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className='linhas '>
-                                        <p className='atributo'>
-                                            {categoria.tamanhoCategoria}
-                                        </p>
+                                    <div className='linha diminuirAltura p-botton'>
+                                        <div className='linhas'>
+                                            <h3 className='atributo'>
+                                                É alimenticia?
+                                            </h3>
+                                        </div>
+                                        <div className='linhas'>
+                                            <p className='atributo'>
+                                                {categoria.alimenticiaCategoria ? "Sim" : "Não"}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='linha diminuirAltura p-botton'>
-                                    <div className='linhas'>
-                                        <h3 className='atributo'>
-                                            É alimenticia?
-                                        </h3>
+                                </CardContent>
+                                <CardActions>
+                                    <div className='linha'>
+                                        <Link
+                                            to={`/formularioCategoria/${categoria.idCategoria}`} className="text-decorator-none">
+                                            <Box mx={1}>
+                                                <Button
+                                                    variant="contained"
+                                                    size="small"
+                                                    className='atualizar-c'>
+                                                    atualizar
+                                                </Button>
+                                            </Box>
+                                        </Link>
+                                        <Link
+                                            to={`/deletarCategoria/${categoria.idCategoria}`}
+                                            className="text-decorator-none">
+                                            <Box mx={1}>
+                                                <Button
+                                                    variant="contained"
+                                                    size="small"
+                                                    color="secondary"
+                                                    className='deletar-c'>
+                                                    deletar
+                                                </Button>
+                                            </Box>
+                                        </Link>
                                     </div>
-                                    <div className='linhas'>
-                                        <p className='atributo'>
-                                            {categoria.alimenticiaCategoria ? "Sim" : "Não"}
-                                        </p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                            <CardActions>
-                                <div className='linha'>
-                                    <Link
-                                        to={`/formularioCategoria/${categoria.idCategoria}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button
-                                                variant="contained"
-                                                size="small"
-                                                className='atualizar-c'>
-                                                atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                    <Link
-                                        to={`/deletarCategoria/${categoria.idCategoria}`}
-                                        className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button
-                                                variant="contained"
-                                                size="small"
-                                                color="secondary"
-                                                className='deletar-c'>
-                                                deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                </div>
-                            </CardActions>
-                        </Card>
-                    </Box>
-                ))}
-            </Box>
+                                </CardActions>
+                            </Card>
+                        </Box>
+                    ))}
+                </Box>
+            </div>
         </>
     )
 }

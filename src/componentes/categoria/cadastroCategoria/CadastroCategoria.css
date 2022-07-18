@@ -30,6 +30,12 @@
   color: #1d1c1c !important;
 }
 
+.alinharCentro{
+  display: flex;
+  justify-content: center;
+  padding-top: 3vh;
+}
+
 .finalizar{
   background-color: #2A4737 !important;
   color: #EDEDEA !important;

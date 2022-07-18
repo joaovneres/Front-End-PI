@@ -66,8 +66,8 @@
 
 /* A equipe */
 .containerEquipe {
-  height: 100vh;
-  padding-top: 5vh;
+  height: 90vh;
+  padding-top: 2vh;
   background-color: #61a383;
 }
 
@@ -101,7 +101,7 @@
   font-size: 18px;
 }
 
-button {
+.button {
   border: none;
   outline: 0;
   display: inline-block;
@@ -131,6 +131,16 @@ a:hover {
   opacity: 0.7;
 }
 
+.imgGeneration{
+  display: flex;
+  justify-content: right;
+  padding-right: 8vw;
+}
+
+.imgGeneration img{
+  width: 20%;
+}
+
 /* Missão visão e valores  */
 
 .container-mvv {
@@ -138,7 +148,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 30vh;
+  height: 35vh;
 
 }
 
@@ -148,7 +158,6 @@ a:hover {
   text-align: center;
   width: 25vw;
   height: 30vh;
-  margin-bottom:'10px';
 }
 
 .visao {
@@ -157,7 +166,6 @@ a:hover {
   width: 25vw;
   height: 30vh;
   background-color: #F399FF;
-  padding :'10px';
 }
 
 .valores {
@@ -166,15 +174,10 @@ a:hover {
   text-align: center;
   width: 25vw;
   height: 30vh;
-  margin-bottom:'10px';
 }
 
 .folhagens{
   position:absolute;
   top:0px;
   left:0px;
-}
-
-.fotoOProjeto{
-  objectFit: 'cover';
 }

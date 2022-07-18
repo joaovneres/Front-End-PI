@@ -182,20 +182,17 @@ function Login() {
               className='branco'>
               Ou utilize suas redes sociais:
             </Typography>
-
           </Box>
-
-
           <Grid container direction="row"
             justifyContent="center"
             alignItems="center">
             <Box className='boxSocialMedia' onClick={alertaSocialMedia}>
               <i><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png"
-                width='40px' /></i>
+                width='40px' alt="" /></i>
             </Box>
             <Box className='boxSocialMedia' onClick={alertaSocialMedia}>
               <i><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
-                width='40px' /></i>
+                width='40px' alt="" /></i>
             </Box>
           </Grid>
 
@@ -224,21 +221,9 @@ function Login() {
             </Link>
           </Box>
         </Box>
-        <Box>
-            <Link
-              to="/home">
-              <Typography
-                variant="subtitle1"
-                gutterBottom
-                align="center"
-                className="textos1">
-                Voltar a home
-              </Typography>
-            </Link>
-          </Box>
       </Grid>
     </Grid>
   )
 }
 
-export default Login
+export default Login;

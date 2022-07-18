@@ -10,7 +10,7 @@
 .logo-navbar-black{
     height: 5vh;
     margin-top: 1vh;
-    background-color: #000000;
+    background-color: #1a1a1a;
 }
 
 .card-nav{
@@ -19,7 +19,7 @@
 }
 
 .card-nav-black{
-    background-color: #000000;
+    background-color: #1a1a1a;
     justify-content: space-between;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .navegar:hover{
-    color: #000000;
+    color: #1a1a1a;
 }
 
 .cursor{
@@ -62,8 +62,6 @@
 /* animated button */
 
 .buttonf {
-    font-family: 'Heebo', sans-serif;
-    /* display: inline-block; */
     border-radius: 4px;
     background-color: #033a20 !important;
     border: none;
@@ -77,10 +75,8 @@
   }
 
   .buttonf-black {
-    font-family: 'Heebo', sans-serif;
-    /* display: inline-block; */
     border-radius: 4px;
-    background-color: #000000 !important;
+    background-color: #1a1a1a !important;
     border: none;
     color: #FFFFFF;
     text-align: center;

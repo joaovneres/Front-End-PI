@@ -6,12 +6,12 @@ import './Sobre.css'
 function Sobre() {
     return (
         <>
-        
-            <Grid container className="caixa">
+
+            <Grid container className="caixa backgroundCategoria">
                 {/* O projeto */}
                 <Grid item xs={12} className='imgProjeto'>
-                <div className='folhagens'> 
-                <img src="https://i.imgur.com/K5ZI6HE.png" width='100%'></img></div>   
+                    <div className='folhagens'>
+                        <img src="https://i.imgur.com/K5ZI6HE.png" width='100%' alt=''></img></div>
                     <Grid xs={7}>
                         <Box className="projeto">
                             <Typography variant='h5' className='titulo'>
@@ -22,7 +22,7 @@ function Sobre() {
                             </Typography>
                             <br />
                             <Typography className='descricao'>
-                            Aqui você poderá navegar entre nossas categorias e escolher as espécies de plantas que mais lhe agrada e se adaptam ao seu ambiente. Com uma breve descrição, você facilmente saberá se sua escolha é adequada ao seu tipo de ambiente e receber sua muda direto em sua residência, contribuindo para um mundo mais verde e sustentável.
+                                Aqui você poderá navegar entre nossas categorias e escolher as espécies de plantas que mais lhe agrada e se adaptam ao seu ambiente. Com uma breve descrição, você facilmente saberá se sua escolha é adequada ao seu tipo de ambiente e receber sua muda direto em sua residência, contribuindo para um mundo mais verde e sustentável.
                             </Typography>
                         </Box>
                     </Grid>
@@ -90,7 +90,7 @@ function Sobre() {
                                 </div>
                             </div>
                             <div className="card">
-                                <img src="https://i.imgur.com/P6xahzp.png" alt="Neres" width='100%' />
+                                <img src="https://i.imgur.com/yzlvFzK.png" alt="Neres" width='100%' />
                                 <h1>Neres</h1>
                                 <p className="title">Desenvolvedor FullStack Java Jr.</p>
                                 <div className="box-link">
@@ -99,23 +99,29 @@ function Sobre() {
                                 </div>
                             </div>
                         </Box>
+                        <Box className='imgGeneration'>
+                            <img src='https://i.imgur.com/HpWHOuv.png' alt='Emblema Generation' />
+                        </Box>
                     </Box>
                 </Grid>
                 {/*  Missão Visão e Valores */}
 
                 <Grid item xs={12} className='container-mvv'>
-                    <Grid className='missao'>Missão
-                    <p>Facilitar, otimizar e modernizar o contato entre os vendedores e compradores de plantas indoor.</p>
+                    <Grid className='missao'>
+                        <p className='titulo'>Missão</p>
+                        <p>Facilitar, otimizar e modernizar o contato entre os vendedores e compradores de plantas indoor.</p>
                     </Grid>
-                    <Grid className='visao'>Visão
-                    <p>Colaborar com a meta estabelecida pela ONU na ODS 11.a através da implementação ampla do marketplace.</p>
+                    <Grid className='visao'>
+                        <p className='titulo'>Visão</p>
+                        <p>Colaborar com a meta estabelecida pela ONU na ODS 11.a através da implementação ampla do marketplace.</p>
                     </Grid>
-                    <Grid className='valores'>Valores
-                    <p>Ética, cidadania, meio-ambiente, responsabilidade e comprometimento.</p>
+                    <Grid className='valores'>
+                        <p className='titulo'>Valores</p>
+                        <p>Ética, cidadania, meio-ambiente, responsabilidade e comprometimento.</p>
                     </Grid>
                 </Grid>
             </Grid>
-                
+
         </>
     )
 }

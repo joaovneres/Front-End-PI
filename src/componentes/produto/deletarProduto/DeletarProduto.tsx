@@ -48,7 +48,7 @@ function DeletarProduto() {
 
   async function sim() {
     try {
-      await deleteId(`/produto/${idProduto}`, {
+      await deleteId(`/produto/deletar/${idProduto}`, {
         headers: {
           Authorization: token,
         }
@@ -64,7 +64,7 @@ function DeletarProduto() {
         theme: 'colored',
         transition: Slide,
       });
-      navigate('/produtos')
+      navigate('/produto')
     } catch (error) {
       console.log(`Erro: ${error}`)
       toast.error('Erro ao deletar produto.', {

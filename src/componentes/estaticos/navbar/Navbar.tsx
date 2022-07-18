@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar } from '@material-ui/core';
 import { Box } from '@mui/material'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css'
@@ -51,36 +51,29 @@ function Navbar() {
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start" >
-                    <Link to='/home'>
-                    <Box mx={1}>
-                        
-                            <button className="buttonf-black"><span> Home </span></button>
+                        <Link to='/home'>
+                            <Box mx={1}>
+                                <button className="buttonf-black fontFamily"><span> Home </span></button>
                             </Box>
                         </Link>
                         <Link to='/produto' >
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Produtos </span></button>
+                                <button className="buttonf-black fontFamily"><span> Produtos </span></button>
                             </Box>
                         </Link>
                         <Link to='/categoria' >
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Categorias </span></button>
+                                <button className="buttonf-black fontFamily"><span> Categorias </span></button>
                             </Box>
                         </Link>
                         <Link to='/sobre' >
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Sobre </span></button>
+                                <button className="buttonf-black fontFamily"><span> Sobre </span></button>
                             </Box>
                         </Link>
-                        {/* <Link to='/logar' className='links'>
-                            <Box mx={1}>
-                            <button className="buttonf-black"><span> Logar </span></button>
-                            </Box>
-                        </Link> */}
                         <Box className='links cursor card-nav-black' onClick={goLogout}>
-                        <button className="buttonf-black"><span> Sair </span></button>
+                            <button className="buttonf-black fontFamily"><span> Sair </span></button>
                         </Box>
-
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -97,34 +90,28 @@ function Navbar() {
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start" >
-                    <Link to='/home'>
-                    <Box mx={1}>
-                        
-                            <button className="buttonf"><span> Home </span></button>
+                        <Link to='/home'>
+                            <Box mx={1}>
+                                <button className="buttonf fontFamily"><span> Home </span></button>
                             </Box>
                         </Link>
                         <Link to='/produto' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Produtos </span></button>
+                                <button className="buttonf fontFamily"><span> Produtos </span></button>
                             </Box>
                         </Link>
                         <Link to='/categoria' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Categorias </span></button>
+                                <button className="buttonf fontFamily"><span> Categorias </span></button>
                             </Box>
                         </Link>
                         <Link to='/sobre' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Sobre </span></button>
+                                <button className="buttonf fontFamily"><span> Sobre </span></button>
                             </Box>
                         </Link>
-                        {/* <Link to='/logar' className='links'>
-                            <Box mx={1}>
-                            <button className="buttonf-black"><span> Logar </span></button>
-                            </Box>
-                        </Link> */}
                         <Box className='links cursor card-nav' onClick={goLogout}>
-                        <button className="buttonf"><span> Sair </span></button>
+                            <button className="buttonf fontFamily"><span> Sair </span></button>
                         </Box>
 
                     </Box>
@@ -132,7 +119,7 @@ function Navbar() {
             </AppBar>
     }
 
- // Caso deslogado e fora da home
+    // Caso deslogado e fora da home
     if (token === "" && rota.pathname !== '/home') {
         navbarComponent =
             <AppBar className='header' position='sticky'>
@@ -143,29 +130,29 @@ function Navbar() {
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start" className='card-nav'>
-                    <Link to='/home' >
+                        <Link to='/home' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Home </span></button>
+                                <button className="buttonf fontFamily"><span> Home </span></button>
                             </Box>
                         </Link>
                         <Link to='/produto' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Produtos </span></button>
+                                <button className="buttonf fontFamily"><span> Produtos </span></button>
                             </Box>
                         </Link>
                         <Link to='/categoria' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Categorias </span></button>
+                                <button className="buttonf fontFamily"><span> Categorias </span></button>
                             </Box>
                         </Link>
                         <Link to='/sobre' >
                             <Box mx={1}>
-                            <button className="buttonf"><span> Sobre </span></button>
+                                <button className="buttonf fontFamily"><span> Sobre </span></button>
                             </Box>
                         </Link>
                         <Link to='/logar' className='links'>
                             <Box mx={1}>
-                            <button className="buttonf"><span> Logar </span></button>
+                                <button className="buttonf fontFamily"><span> Logar </span></button>
                             </Box>
                         </Link>
                     </Box>
@@ -184,30 +171,29 @@ function Navbar() {
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start" >
-                    <Link to='/home'>
-                    <Box mx={1}>
-                        
-                            <button className="buttonf-black"><span> Home </span></button>
+                        <Link to='/home'>
+                            <Box mx={1}>
+                                <button className="buttonf-black fontFamily"><span> Home </span></button>
                             </Box>
                         </Link>
                         <Link to='/produto' >
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Produtos </span></button>
+                                <button className="buttonf-black fontFamily"><span> Produtos </span></button>
                             </Box>
                         </Link>
                         <Link to='/categoria' >
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Categorias </span></button>
+                                <button className="buttonf-black fontFamily"><span> Categorias </span></button>
                             </Box>
                         </Link>
                         <Link to='/sobre' >
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Sobre </span></button>
+                                <button className="buttonf-black fontFamily"><span> Sobre </span></button>
                             </Box>
                         </Link>
                         <Link to='/logar' className='links'>
                             <Box mx={1}>
-                            <button className="buttonf-black"><span> Logar </span></button>
+                                <button className="buttonf-black fontFamily"><span> Logar </span></button>
                             </Box>
                         </Link>
                     </Box>
