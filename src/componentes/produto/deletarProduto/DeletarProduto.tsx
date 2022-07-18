@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
+import { Button, Card, CardActionArea, CardActions, CardContent, makeStyles, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
@@ -7,6 +7,7 @@ import { Slide, toast } from 'react-toastify';
 import Produto from '../../../models/Produto';
 import { buscaId, deleteId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import './DeletarProduto.css';
 
 function DeletarProduto() {
   let navigate = useNavigate();
@@ -85,45 +86,82 @@ function DeletarProduto() {
     navigate('/produto');
   }
 
+  const useStyles = makeStyles({
+    root: {
+      width: 350,
+      margin: 15,
+    },
+    media: {
+      height: 250,
+    },
+  });
+
+  const classes = useStyles();
+
   return (
     <>
-      <Box m={2}>
-        <Card variant="outlined">
-          <CardContent>
-            <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
-                Deseja deletar o produto:
-              </Typography>
-              <Typography color="textSecondary">{produto?.nomeProduto}</Typography>
-            </Box>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
-              <Box mx={2}>
-                <Button
-                  onClick={sim}
-                  variant="contained"
-                  className="marginLeft"
-                  size="large"
-                  color="primary"
-                >
-                  Sim
-                </Button>
+      <div className='corpo'>
+        <div className='membro'>
+          <div className='cardDelete'>
+            <CardContent>
+              <Box className='boxProdu'>
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2" className='nomeProduto'>
+                        {produto?.nomeProduto}
+                      </Typography>
+                      <Typography gutterBottom variant="h5" component="h2" className='nomeProduto'>
+                        R$ {produto?.valorProduto}
+                      </Typography>
+                      <Typography variant="body2" color="textPrimary" component="p">
+                        {produto?.descProduto}
+                      </Typography>
+                      <Typography variant="body2" color="textPrimary" component="p">
+                        Quantidade em estoque: {produto?.qtdProduto}
+                      </Typography>
+                      <Typography variant="body2" color="textPrimary" component="p">
+                        Anunciado em: {produto?.enderecoProduto}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+                <h1 className='h1'>
+                  Você tem certeza ?
+                </h1>
               </Box>
-              <Box>
-                <Button
-                  onClick={nao}
-                  variant="contained"
-                  size="large"
-                  color="secondary"
-                >
-                  Não
-                </Button>
+            </CardContent>
+
+            <div className='botoes'>
+              <Box
+                display='flex'
+                justifyContent='start'
+                ml={1}
+                mb={2}>
+                <Box mx={2}>
+                  <Button
+                    onClick={sim}
+                    variant='contained'
+                    size='large'
+                    color='primary'
+                    className='marginLeft sim'>
+                    Sim
+                  </Button>
+                </Box>
+                <Box mx={2}>
+                  <Button
+                    onClick={nao}
+                    variant='contained'
+                    size='large'
+                    className='nao'>
+                    Não
+                  </Button>
+                </Box>
               </Box>
-            </Box>
-          </CardActions>
-        </Card>
-      </Box>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

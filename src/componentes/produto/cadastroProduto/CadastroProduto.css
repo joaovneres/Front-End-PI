@@ -1,0 +1,37 @@
+.containerProduto {
+    min-height: 86.6vh;
+    background-image: url(https://i.imgur.com/cMW2q7v.jpg);
+    background-color: #EDEDEA;
+    background-size: 170vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.boxForms {
+    padding-top: 16vh;
+    display: flex;
+    justify-content: center;
+}
+
+.formsProduto {
+    background-color: #ededeacc;
+    width: 23%;
+    border-radius: 4%;
+}
+
+.tituloProd {
+    color: #1d1c1c !important;
+    margin-top: 1vh;
+}
+
+.inputs-Prod{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.margin-bottom{
+    margin-bottom: 2vh;
+}

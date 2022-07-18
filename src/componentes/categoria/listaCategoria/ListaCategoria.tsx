@@ -27,7 +27,7 @@ function ListaCategoria() {
                 <article className='linha-t'>
                     <h1 className='categoria-t fontFamily'>Categorias</h1>
 
-                    <Link to='/formularioCategoria' className='nova-c'>
+                    <Link to='/formularioCategoria' className='linksAnunciar'>
                         <p className='p fontFamily'>Nova categoria</p>
                     </Link>
 

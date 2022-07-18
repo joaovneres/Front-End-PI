@@ -1,18 +1,41 @@
 .container-produtos {
-    margin: 2vh;
     justify-content: center;
-    min-height: 81vh;
+    align-content: center;
+    min-height: 86.6vh;
+    padding-bottom: 1.5vh;
+    background-color: #ededeacc;
+    display: flex;
+    flex-direction: column;
+}
+
+.anunciar {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+
+.produtos {
+    text-align: center;
+    margin-right: 1vw;
+}
+
+.anuncieButton {
+    font-size: 19px;
+    padding: 1vh;
+    border-radius: 40px;
+    background-color: #053B03;
+    color: aliceblue;
 }
 
 .lista-produtos {
-    min-height: 80vh;
+    min-height: 75vh;
+    align-self: flex-start;
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #d4f7be;
-    align-self: center;
     border-radius: 1%;
-    box-shadow: 2px 2px #a9c598;
+    margin: 0vh 0vw;
 }
 
 .img-list-prod img {
@@ -20,7 +43,25 @@
 }
 
 .nomeProduto {
-    font-size: 20px !important;
-    font-weight: bold !important;
-    margin: 0px;
+    font-weight: bolder !important;
+    margin-bottom: 0vh !important;
+}
+
+.deletar-p {
+    background-color: #e45272 !important;
+}
+
+.atualizar-p {
+    color: white !important;
+    background-color: #02680b !important;
+}
+
+.atualizar-p:hover {
+    color: white;
+    background-color: #0a8b05 !important;
+}
+
+.botaoProduto{
+    display: flex;
+    justify-content: space-evenly;
 }

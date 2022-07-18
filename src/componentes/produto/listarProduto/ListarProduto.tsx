@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, Grid, Typography } from '@material-ui/core';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, makeStyles, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
@@ -18,44 +18,84 @@ function ListarProduto() {
     listarProdutos()
   }, [produtos.length])
 
+  //Estilizar cards
+
+  const useStyles = makeStyles({
+    root: {
+      width: 350,
+      margin: 15
+    },
+    media: {
+      height: 250,
+    },
+  });
+
+  const classes = useStyles();
+
   return (
     <>
       <Grid container xs={12} className="container-produtos">
-        <Grid container spacing={2} xs={10} className="lista-produtos">
+        <Box className='anunciar'>
+          <h1 className='produtos fontFamily'>Categorias</h1>
+          <Link to='/formularioProduto' className='linksAnunciar'>
+            <p className='anuncieButton fontFamily'>Anunciar produto</p>
+          </Link>
+        </Box>
+        <Grid container spacing={3} xs={9} className="lista-produtos">
           {
             produtos.map(produto => (
-              <Grid item xs={3}>
-                <Box >
-                  <Card variant="outlined">
-                      <Box className='img-list-prod'>
-                      <img src={produto.imgProduto} alt="Produto"/>
-                      </Box>
-                    <CardContent>
-                      <Typography component="h2" className='nomeProduto'>
-                        {produto.nomeProduto}
-                      </Typography>
-                      <Typography component="p">
-                        R$ {produto.valorProduto}
-                      </Typography>
-                      <Typography component="p">
-                        {produto.categoria?.tipoCategoria}
-                      </Typography>
-                      <Typography component="p">
-                        Local: {produto.enderecoProduto}
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Link to={`/deletarProduto/${produto.idProduto}`} className="text-decorator-none">
-                          <Box mx={1}>
-                            <Button variant="contained" size='small' color="secondary">
-                              Comprar
-                            </Button>
-                          </Box>
-                        </Link>
-                    </CardActions>
-                  </Card>
-                </Box>
-              </Grid>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={produto.imgProduto}
+                    title={produto.nomeProduto}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2" className='nomeProduto'>
+                      {produto.nomeProduto}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="h2" className='nomeProduto'>
+                      R$ {produto.valorProduto}
+                    </Typography>
+                    <Typography variant="body2" color="textPrimary" component="p">
+                      {produto.descProduto}
+                    </Typography>
+                    <Typography variant="body2" color="textPrimary" component="p">
+                      Quantidade em estoque: {produto.qtdProduto}
+                    </Typography>
+                    <Typography variant="body2" color="textPrimary" component="p">
+                      Anunciado em: {produto.enderecoProduto}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions className='botaoProduto'>
+                  <Link
+                    to={`/formularioProduto/${produto.idProduto}`} className="text-decorator-none">
+                    <Box>
+                      <Button
+                        variant="contained"
+                        size="small"
+                        className='atualizar-p'>
+                        Atualizar anúncio
+                      </Button>
+                    </Box>
+                  </Link>
+                  <Link
+                    to={`/deletarProduto/${produto.idProduto}`}
+                    className="text-decorator-none">
+                    <Box>
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="secondary"
+                        className='deletar-p'>
+                        Excluir anúncio
+                      </Button>
+                    </Box>
+                  </Link>
+                </CardActions>
+              </Card>
             ))
           }
         </Grid>
