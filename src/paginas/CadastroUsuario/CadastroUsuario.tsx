@@ -117,6 +117,7 @@ function CadastroUsuario() {
                 theme: 'colored',
                 transition: Slide,
             });
+            navigate('/logar')
         }
     }
 
@@ -162,7 +163,7 @@ function CadastroUsuario() {
                                 name='emailUsuario'
                                 margin='normal'
                             />
-                            <TextField
+                            {/*<TextField
                                 value={usuario.fotoUsuario}
                                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                                 id="fotoUsuario"
@@ -170,7 +171,7 @@ function CadastroUsuario() {
                                 variant='outlined'
                                 name='fotoUsuario'
                                 margin='normal'
-                            />
+    />*/}
                             <TextField
                                 value={usuario.senhaUsuario}
                                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
