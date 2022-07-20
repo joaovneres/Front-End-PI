@@ -5,7 +5,7 @@ import Home from './paginas/Home/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './paginas/Login/Login';
 import Sobre from './paginas/Sobre/Sobre';
-import CadastroUsuario from './paginas/CadastroUsuario/CadastroUsuario';
+import CadastroUsuario from './componentes/usuario/CadastroUsuario/CadastroUsuario';
 import CadastroCategoria from './componentes/categoria/cadastroCategoria/CadastroCategoria';
 import ListaCategoria from './componentes/categoria/listaCategoria/ListaCategoria';
 import ListarProduto from './componentes/produto/listarProduto/ListarProduto';

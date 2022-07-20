@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar } from '@material-ui/core';
 import { Box } from '@mui/material'
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import './Navbar.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -9,6 +9,9 @@ import { addToken } from '../../../store/tokens/action';
 import { Slide, toast } from 'react-toastify';
 
 function Navbar() {
+    /* Usuarios */
+    
+    const { idUsuario } = useParams<{ idUsuario: string }>()
 
     function goLogout() {
         dispatch(addToken(''))
@@ -51,6 +54,12 @@ function Navbar() {
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start" >
+                    {/* {`/formularioProduto/${produto.idProduto}`} */}
+                        {/* <Link to={`/usuario/${usuario.idUsuario}`}>
+                            <Box mx={1}>
+                                <button className="buttonf-black fontFamily"><span> Meu perfil </span></button>
+                            </Box>
+                        </Link> */}
                         <Link to='/home'>
                             <Box mx={1}>
                                 <button className="buttonf-black fontFamily"><span> Home </span></button>
