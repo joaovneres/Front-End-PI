@@ -67,6 +67,9 @@ function ListarProduto() {
                     <Typography variant="body2" color="textPrimary" component="p">
                       Anunciado em: {produto.enderecoProduto}
                     </Typography>
+                    <Typography variant="body2" color="textPrimary" component="p">
+                      Anunciado por: {produto.usuario?.nomeUsuario}
+                    </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions className='botaoProduto'>

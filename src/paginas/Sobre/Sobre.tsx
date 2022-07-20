@@ -50,8 +50,8 @@ function Sobre() {
 
                 <Grid item xs={12} className='containerEquipe'>
                     <Box>
-                        <h1 className='equipeTitulo fontFamily'>A equipe</h1>
-                        <p className='equipeParagrafo'> Somos um time de desenvolvedores motivados a fazer a diferença</p>
+                        <h1 className='equipeTitulo fontFamily titulo'>A equipe</h1>
+                        <p className='equipeParagrafo descricao'> Somos um time de desenvolvedores motivados a fazer a diferença</p>
                         <Box className='cards'>
                             <div className="card">
                                 <img src="https://i.imgur.com/byiphkch.jpg" alt="Carlos" width='100%' />
