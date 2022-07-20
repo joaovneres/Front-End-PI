@@ -65,7 +65,7 @@ function CadastroCategoria() {
   }, [token]);
 
   async function findById(idCategoria: string) {
-    await buscaId(`/categoria/buscar/${idCategoria}`, setCategoria,);
+    await buscaId(`/categoria/buscar/${idCategoria}`, setCategoria);
   }
 
   useEffect(() => {

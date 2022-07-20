@@ -16,6 +16,7 @@ import store from './store/store';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PerfilUsuario from './componentes/usuario/perfilUsuario/PerfilUsuario';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/formularioProduto/:idProduto" element={<CadastroProduto />} />
           <Route path="/deletarCategoria/:idCategoria" element={<DeletarCategoria />} />
           <Route path="/deletarProduto/:idProduto" element={<DeletarProduto />} />
+          <Route path="/usuario/:id" element={<PerfilUsuario />} />
         </Routes>
         <Footer />
       </Router>

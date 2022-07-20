@@ -35,6 +35,10 @@ function Navbar() {
         (state) => state.token
     )
 
+    const usuario = useSelector<TokenState, TokenState['id']>(
+        (state) => state.id
+    )
+
     const dispatch = useDispatch()
 
     let navigate = useNavigate();
@@ -54,12 +58,11 @@ function Navbar() {
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start" >
-                    {/* {`/formularioProduto/${produto.idProduto}`} */}
-                        {/* <Link to={`/usuario/${usuario.idUsuario}`}>
+                        <Link to={`/usuario/${usuario}`}>
                             <Box mx={1}>
                                 <button className="buttonf-black fontFamily"><span> Meu perfil </span></button>
                             </Box>
-                        </Link> */}
+                        </Link>
                         <Link to='/home'>
                             <Box mx={1}>
                                 <button className="buttonf-black fontFamily"><span> Home </span></button>

@@ -36,10 +36,7 @@ function ListarProduto() {
     <>
       <Grid container xs={12} className="container-produtos">
         <Box className='anunciar'>
-          <h1 className='produtos fontFamily'>Categorias</h1>
-          <Link to='/formularioProduto' className='linksAnunciar'>
-            <p className='anuncieButton fontFamily'>Anunciar produto</p>
-          </Link>
+          <h1 className='produtos fontFamily'>Produtos</h1>
         </Box>
         <Grid container spacing={3} xs={9} className="lista-produtos">
           {
