@@ -107,18 +107,18 @@ function Sobre() {
                 {/*  Missão Visão e Valores */}
 
                 <Grid item xs={12} className='container-mvv'>
-                    <Grid className='missao'>
+                    <Box className='missao'>
                         <Typography variant='h5' className='titulo'>Missão</Typography>
-                        <Typography>Facilitar, otimizar e modernizar o contato entre os vendedores e compradores de plantas indoor.</Typography>
-                    </Grid>
-                    <Grid className='visao'>
+                        <Typography className='corpoMVC'>Facilitar, otimizar e modernizar o contato entre os vendedores e compradores de plantas indoor.</Typography>
+                    </Box>
+                    <Box className='visao'>
                         <Typography variant='h5' className='titulo'>Visão</Typography>
-                        <Typography>Colaborar com a meta estabelecida pela ONU na ODS 11.a através da implementação ampla do marketplace.</Typography>
-                    </Grid>
-                    <Grid className='valores'>
+                        <Typography className='corpoMVC'>Colaborar com a meta estabelecida pela ONU na ODS 11.a através da implementação ampla do marketplace.</Typography>
+                    </Box>
+                    <Box className='valores'>
                         <Typography variant='h5' className='titulo'>Valores</Typography>
-                        <Typography>Ética, cidadania, meio-ambiente, responsabilidade e comprometimento.</Typography>
-                    </Grid>
+                        <Typography className='corpoMVC'>Ética, cidadania, meio-ambiente, responsabilidade e comprometimento.</Typography>
+                    </Box>
                 </Grid>
             </Grid>
 

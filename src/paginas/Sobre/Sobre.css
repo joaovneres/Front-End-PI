@@ -10,10 +10,11 @@
   padding-bottom: 20px;
   font-size: 40px !important;
   font-family: 'Delmon Delicate', sans-serif !important;
+  padding-top: 1vh !important;
 }
 
 .descricao {
-  font-size: 23px !important;
+  font-size: 25px !important;
   text-align: justify;
 
 }
@@ -143,27 +144,28 @@ a:hover {
 /* Missão visão e valores  */
 
 .container-mvv {
-  padding: 2vh;
+  padding-top: 17.5vh;
+  padding-bottom: 17.5vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 35vh;
+  min-height: 35vh;
 
 }
 
 .missao {
-  font-size: 24px;
+  font-size: 100%;
   margin-right: 2vw;
   text-align: center;
   width: 25vw;
-  height: 30vh;
+  min-height: 30vh;
 }
 
 .visao {
   font-size: 24px;
   text-align: center;
   width: 25vw;
-  min-height: 100%;
+  min-height: 30vh;
   background-color: #F399FF;
 }
 
@@ -179,4 +181,11 @@ a:hover {
   position:absolute;
   top:0px;
   left:0px;
+}
+
+.corpoMVC{
+  font-size: 25px !important;
+  margin-left: 1vw !important;
+  margin-right: 1vw !important;
+  text-align: justify;
 }
