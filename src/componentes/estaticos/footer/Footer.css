@@ -1,11 +1,12 @@
 .footer{
     background-color: #03301b;
-    height: 7vh;
+    min-height: 7vh;
 }
 
 .textos{
     text-align: center;
-    color: #ffffff
+    color: #ffffff;
+    margin-bottom: 0vh !important;
 }
 
 .links{
