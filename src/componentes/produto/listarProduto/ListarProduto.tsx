@@ -2,12 +2,26 @@ import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { Slide, toast } from 'react-toastify';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
 import './listaProdutos.css'
 
 function ListarProduto() {
 
+  function neres(){
+    toast.info('Função não implementada', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      transition: Slide,
+    });
+  }
   const [produtos, setProdutos] = useState<Produto[]>([])
 
   async function listarProdutos() {
@@ -70,30 +84,17 @@ function ListarProduto() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions className='botaoProduto'>
-                  <Link
-                    to={`/formularioProduto/${produto.idProduto}`} className="text-decorator-none">
-                    <Box>
-                      <Button
-                        variant="contained"
-                        size="small"
-                        className='atualizar-p'>
-                        Atualizar anúncio
-                      </Button>
-                    </Box>
-                  </Link>
-                  <Link
-                    to={`/deletarProduto/${produto.idProduto}`}
-                    className="text-decorator-none">
-                    <Box>
-                      <Button
-                        variant="contained"
-                        size="small"
-                        color="secondary"
-                        className='deletar-p'>
-                        Excluir anúncio
-                      </Button>
-                    </Box>
-                  </Link>
+
+                  <Box>
+                    <Button
+                      onClick={neres}
+                      variant="contained"
+                      size="small"
+                      className='atualizar-p'>
+                      Comprar
+                    </Button>
+                  </Box>
+
                 </CardActions>
               </Card>
             ))
