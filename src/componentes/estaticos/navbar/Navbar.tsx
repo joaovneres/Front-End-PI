@@ -129,7 +129,6 @@ function Navbar() {
                     </Box>
 
                     <Box display="flex" justifyContent="start" >
-                        <img src='https://i.imgur.com/Nn5WV2j.png' alt='carrinho' className='carrinhoNav' />
                         <Link to={`/usuario/${usuario}`}>
                             <Box mx={1}>
                                 <button className="buttonf fontFamily"><span> Meu perfil </span></button>
