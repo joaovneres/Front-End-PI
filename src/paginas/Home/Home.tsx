@@ -64,7 +64,7 @@ function Home() {
                 Conecte-se com as pessoas que trabalham para
                 ver um mundo cheio de vida. Nossa loja permite que
                 você encontre as mais diversas espécies de plantas
-                para fazer da sua casa um verdadeiro jardim urbano
+                para fazer da sua casa um verdadeiro jardim urbano.
               </Typography>
               <div className='btn-img'>
                 <Link to='/produto' className='links'>

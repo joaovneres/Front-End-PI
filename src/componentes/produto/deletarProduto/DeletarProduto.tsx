@@ -65,7 +65,7 @@ function DeletarProduto() {
         theme: 'colored',
         transition: Slide,
       });
-      navigate('/produto')
+      navigate('/usuario/:id')
     } catch (error) {
       console.log(`Erro: ${error}`)
       toast.error('Erro ao deletar produto.', {
@@ -83,7 +83,7 @@ function DeletarProduto() {
   }
 
   function nao() {
-    navigate('/produto');
+    navigate('/usuario/:id');
   }
 
   const useStyles = makeStyles({

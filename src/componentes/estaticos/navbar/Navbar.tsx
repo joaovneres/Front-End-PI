@@ -10,7 +10,7 @@ import { Slide, toast } from 'react-toastify';
 
 function Navbar() {
     /* Usuarios */
-    
+
     const { idUsuario } = useParams<{ idUsuario: string }>()
 
     function goLogout() {
@@ -57,12 +57,7 @@ function Navbar() {
                             <img alt='Logo Botanic House' src="https://i.imgur.com/rgsqm4w.png" className='logo-navbar-black' />
                         </Box>
                     </Link>
-                    <Box display="flex" justifyContent="start" >
-                        <Link to={`/usuario/${usuario}`}>
-                            <Box mx={1}>
-                                <button className="buttonf-black fontFamily"><span> Meu perfil </span></button>
-                            </Box>
-                        </Link>
+                    <Box display="flex" justifyContent="start">
                         <Link to='/home'>
                             <Box mx={1}>
                                 <button className="buttonf-black fontFamily"><span> Home </span></button>
@@ -83,6 +78,14 @@ function Navbar() {
                                 <button className="buttonf-black fontFamily"><span> Sobre </span></button>
                             </Box>
                         </Link>
+                    </Box>
+                    <Box display="flex" justifyContent="start" >
+                        <Link to={`/usuario/${usuario}`}>
+                            <Box mx={1}>
+                                <button className="buttonf-black fontFamily"><span> Meu perfil </span></button>
+                            </Box>
+                        </Link>
+
                         <Box className='links cursor card-nav-black' onClick={goLogout}>
                             <button className="buttonf-black fontFamily"><span> Sair </span></button>
                         </Box>
@@ -101,7 +104,8 @@ function Navbar() {
                             <img alt='Logo Botanic House' src="https://i.imgur.com/rgsqm4w.png" className='logo-navbar' />
                         </Box>
                     </Link>
-                    <Box display="flex" justifyContent="start" >
+
+                    <Box display="flex" justifyContent="start">
                         <Link to='/home'>
                             <Box mx={1}>
                                 <button className="buttonf fontFamily"><span> Home </span></button>
@@ -120,6 +124,14 @@ function Navbar() {
                         <Link to='/sobre' >
                             <Box mx={1}>
                                 <button className="buttonf fontFamily"><span> Sobre </span></button>
+                            </Box>
+                        </Link>
+                    </Box>
+
+                    <Box display="flex" justifyContent="start" >
+                        <Link to={`/usuario/${usuario}`}>
+                            <Box mx={1}>
+                                <button className="buttonf fontFamily"><span> Meu perfil </span></button>
                             </Box>
                         </Link>
                         <Box className='links cursor card-nav' onClick={goLogout}>
@@ -141,7 +153,7 @@ function Navbar() {
                             <img alt='Logo Botanic House' src="https://i.imgur.com/rgsqm4w.png" className='logo-navbar' />
                         </Box>
                     </Link>
-                    <Box display="flex" justifyContent="start" className='card-nav'>
+                    <Box display="flex" justifyContent="start">
                         <Link to='/home' >
                             <Box mx={1}>
                                 <button className="buttonf fontFamily"><span> Home </span></button>
@@ -162,6 +174,9 @@ function Navbar() {
                                 <button className="buttonf fontFamily"><span> Sobre </span></button>
                             </Box>
                         </Link>
+                    </Box>
+                    <Box display="flex" justifyContent="start" className='card-nav'>
+
                         <Link to='/logar' className='links'>
                             <Box mx={1}>
                                 <button className="buttonf fontFamily"><span> Logar </span></button>
@@ -182,7 +197,7 @@ function Navbar() {
                             <img alt='Logo Botanic House' src="https://i.imgur.com/rgsqm4w.png" className='logo-navbar-black' />
                         </Box>
                     </Link>
-                    <Box display="flex" justifyContent="start" >
+                    <Box display="flex" justifyContent="start">
                         <Link to='/home'>
                             <Box mx={1}>
                                 <button className="buttonf-black fontFamily"><span> Home </span></button>
@@ -203,6 +218,9 @@ function Navbar() {
                                 <button className="buttonf-black fontFamily"><span> Sobre </span></button>
                             </Box>
                         </Link>
+                    </Box>
+                    <Box display="flex" justifyContent="start" >
+
                         <Link to='/logar' className='links'>
                             <Box mx={1}>
                                 <button className="buttonf-black fontFamily"><span> Logar </span></button>

@@ -1,0 +1,61 @@
+.container-perfil{
+    display: flex;
+    background-color: #ededeacc;
+}
+
+.usuario-perfil{
+    text-align: center;
+    width: 25vw;
+    min-height: 91vh;
+    display: flex;
+    flex-direction: column;
+}
+.produto-perfil{
+    border: 1px solid gray;
+    width: 75vw;
+    background-color: #ffffffcc;
+    min-height: 91vh;
+    margin-right: 5vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    border-radius: 50px;
+} 
+
+.foto-perfil{
+    width: 18vw;
+    border-radius: 100%;
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
+    margin-top: 2vw;
+}
+
+.textinho{
+    margin-top: 0px;
+    margin-right: 3.5vw;
+    margin-left: 3.5vw;
+    font-size: 16px;
+    color: grey;
+}
+
+.meus-produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.botao-anunciar {
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
+    width: 18vw;
+    text-decoration: none !important;
+}
+
+.sombra{
+    box-shadow: 5px 10px 18px #888888 !important;
+    width: 20vw;
+    margin-bottom: 2vw;
+}
+
+.media{
+    height: 250px;
+}
