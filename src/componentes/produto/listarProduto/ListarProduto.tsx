@@ -9,7 +9,7 @@ import './listaProdutos.css'
 
 function ListarProduto() {
 
-  function neres(){
+  function no() {
     toast.info('Função não implementada', {
       position: "top-center",
       autoClose: 2000,
@@ -87,10 +87,11 @@ function ListarProduto() {
 
                   <Box>
                     <Button
-                      onClick={neres}
+                      onClick={no}
                       variant="contained"
                       size="small"
                       className='atualizar-p'>
+                      <img src='https://i.imgur.com/Nn5WV2j.png' alt='carrinho' className='carrinho' />
                       Comprar
                     </Button>
                   </Box>

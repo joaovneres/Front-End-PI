@@ -1,19 +1,16 @@
 
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import {  useSelector } from 'react-redux';
+import { Link, useNavigate} from 'react-router-dom';
 import { Slide, toast } from 'react-toastify';
-import Produto from '../../../models/Produto';
 import Usuario from '../../../models/Usuario';
-import { buscaId, buscaProdutobyId, buscar } from '../../../services/Service';
+import {  buscaProdutobyId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import './PerfilUsuario.css';
 
 function PerfilUsuario() {
-
-    const dispatch = useDispatch();
 
     let navigate = useNavigate();
 
@@ -71,7 +68,7 @@ function PerfilUsuario() {
             <div className='container-perfil'>
                 <div className='usuario-perfil'>
                     <div >
-                        <img src={usuario.fotoUsuario} className='foto-perfil' />
+                        <img src={usuario.fotoUsuario} className='foto-perfil' alt={usuario.nomeUsuario}/>
                     </div>
                     <h1 className='fontFamily'>Olá, {usuario.nomeUsuario}</h1>
                     <p className='textinho'>
@@ -121,7 +118,7 @@ function PerfilUsuario() {
                                                 <Button
                                                     variant="contained"
                                                     size="small"
-                                                    className='atualizar-p'>
+                                                    className='atualizar-perfil'>
                                                     Atualizar anúncio
                                                 </Button>
                                             </Box>

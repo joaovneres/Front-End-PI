@@ -136,3 +136,9 @@
     opacity: 1;
     right: 0;
   }
+
+  .carrinhoNav{
+    height: 3vh;
+    filter: invert(100%);  
+    margin-top: 0.5vh;
+}

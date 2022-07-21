@@ -65,3 +65,9 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.carrinho{
+    height: 3vh;
+    filter: invert(100%);
+    margin-right: 2vh;
+}

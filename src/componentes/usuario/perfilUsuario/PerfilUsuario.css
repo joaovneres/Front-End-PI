@@ -59,3 +59,14 @@
 .media{
     height: 250px;
 }
+
+.atualizar-perfil {
+    color: white !important;
+    background-color: #02680b !important;
+    font-size: 13px !important;
+}
+
+.atualizar-perfil:hover {
+    color: white;
+    background-color: #0a8b05 !important;
+}
