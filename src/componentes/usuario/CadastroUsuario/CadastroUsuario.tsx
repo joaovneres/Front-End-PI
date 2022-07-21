@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Usuario from '../../models/Usuario';
-import { cadastroUsuario } from '../../services/Service';
+import Usuario from '../../../models/Usuario';
+import { cadastroUsuario } from '../../../services/Service';
 import { Grid, Box, Typography, Button, TextField } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
@@ -163,7 +163,7 @@ function CadastroUsuario() {
                                 name='emailUsuario'
                                 margin='normal'
                             />
-                            {/*<TextField
+                            <TextField
                                 value={usuario.fotoUsuario}
                                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                                 id="fotoUsuario"
@@ -171,7 +171,7 @@ function CadastroUsuario() {
                                 variant='outlined'
                                 name='fotoUsuario'
                                 margin='normal'
-    />*/}
+                            />
                             <TextField
                                 value={usuario.senhaUsuario}
                                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}

@@ -5,7 +5,7 @@ import Home from './paginas/Home/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './paginas/Login/Login';
 import Sobre from './paginas/Sobre/Sobre';
-import CadastroUsuario from './paginas/CadastroUsuario/CadastroUsuario';
+import CadastroUsuario from './componentes/usuario/CadastroUsuario/CadastroUsuario';
 import CadastroCategoria from './componentes/categoria/cadastroCategoria/CadastroCategoria';
 import ListaCategoria from './componentes/categoria/listaCategoria/ListaCategoria';
 import ListarProduto from './componentes/produto/listarProduto/ListarProduto';
@@ -16,6 +16,7 @@ import store from './store/store';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PerfilUsuario from './componentes/usuario/perfilUsuario/PerfilUsuario';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/formularioProduto/:idProduto" element={<CadastroProduto />} />
           <Route path="/deletarCategoria/:idCategoria" element={<DeletarCategoria />} />
           <Route path="/deletarProduto/:idProduto" element={<DeletarProduto />} />
+          <Route path="/usuario/:id" element={<PerfilUsuario />} />
         </Routes>
         <Footer />
       </Router>

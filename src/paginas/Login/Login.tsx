@@ -64,11 +64,7 @@ function Login() {
 
   useEffect(() => {
     if (respUsuarioLogin.tokenLogin !== "") {
-
-      // Verifica os dados pelo console (Opcional)
-      console.log("Token: " + respUsuarioLogin.tokenLogin)
-      console.log("ID: " + respUsuarioLogin.idLogin)
-
+      
       // Guarda as informações dentro do Redux (Store)
       dispatch(addToken(respUsuarioLogin.tokenLogin))
       dispatch(addId(respUsuarioLogin.idLogin.toString()))    // Faz uma conversão de Number para String

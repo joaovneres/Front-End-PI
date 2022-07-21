@@ -182,7 +182,7 @@ function CadastroProduto() {
   }
 
   function back() {
-    navigate('/produto');
+    navigate('/usuario/:id');
   }
 
   return (
