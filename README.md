@@ -1,6 +1,6 @@
 ## Projeto
 
-Front-End do projeto integrador,  desenvolvido para apresentação no feira de empregabilidade, oferecido no curso de formação para Desenvolvedor FullStack Java Jr., oferecido pela Generation Brasil.
+Front-End do projeto integrador,  desenvolvido para apresentação na feira de empregabilidade, oferecido no curso de formação para Desenvolvedor FullStack Java Jr. Oferecido pela Generation Brasil.
 
 ## Tecnologias
 
